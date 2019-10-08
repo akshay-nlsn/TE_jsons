@@ -1,0 +1,59 @@
+{
+  "cycleDate": "2019-06-08",
+  "datasetId": 123445,
+  "name": {
+    "en": "Tyson",
+    "fr": "Tyson"
+  },
+  "codeName": "COKE436PI",
+  "client": {
+    "name": "Tyson",
+    "clientId": 9000,
+    "clientType": "MANUFACTURER"
+  },
+  "countryCode": "US",
+  "dataviewType": "PRE_AGG",
+  "solutionType": "RMS",
+  "sourceDBNames":{
+     "fg_name":[
+        "fg_snspazuna_1000233"
+     ],
+     "mt_name":[]
+  },
+  "physicalReportableDBName": "PQM_TYSON_1000233_E2E",
+  "excludeFacts": [
+    "795",
+    "235",
+    "880",
+    "785",
+    "1072",
+    "1074",
+    "1073",
+    "1071",
+    "5410",
+    "5411",
+    "7537",
+    "7538",
+    "2309",
+    "2310",
+    "2311",
+    "244",
+    "1007",
+    "243"
+  ],
+  "excludeHierarchy": [
+    "null"
+  ],
+  "charMapping": [
+    {
+      "srcChars": [
+        "CSTM_1000000123",
+        "CSTM_1000000456",
+        "CSTM_1000000789"
+      ],
+      "tgtChar": "CSTM_12345",
+      "tgtCharName": "MyDepartment",
+      "charValueColumn": "CSTM_1000000123"
+    }
+  ]
+}

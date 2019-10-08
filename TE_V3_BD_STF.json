@@ -1,0 +1,325 @@
+{
+  "frameDefinition": {
+    "DBEngine": {
+      "Snowflake": {
+        "SnowflakeConfig": {
+          "sfOption": [
+            ""
+          ]
+        }
+      },
+      "SparkSQL": {
+        "SparkConfig": {
+          "sparkProps": [
+            ""
+          ]
+        }
+      }
+    },
+    "QueryEngine": {
+      "QE_type": "Spark-SQL/Snowflake"
+    },
+    "DBEngineConfig": {
+      "Cost_Estimate": ":Low/Avg/high/very-high",
+      "No_of_executer": "10",
+      "Memory_per_executer": "10",
+      "Core_per_executer": "5"
+    },
+    "physical": {
+      "tables": [
+        {
+          "tableName": "trag_aggregated_data",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000575.trag_universe_data",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "agd_mah_id",
+              "columnHeader": "agd_mah_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "agd_tpr_id",
+              "columnHeader": "agd_tpr_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        },
+        {
+          "tableName": "trag_universe_data",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000575.trag_universe_data",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "agd_mah_id",
+              "columnHeader": "agd_mah_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "agd_tpr_id",
+              "columnHeader": "agd_tpr_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        },
+        {
+          "tableName": "trds_data_scope_output_fact",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000575.trds_data_scope_output_fact",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "dof_fds_id",
+              "columnHeader": "dof_fds_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "dof_ouf_id",
+              "columnHeader": "dof_ouf_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        }
+      ]
+    },
+    "logical": {
+      "dimensions": [
+        {
+          "dimensionName": "Market",
+          "dimensionTemplate": "MarketBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "MarketCSV",
+              "StepDescription": "Market CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds market file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "MRKT_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+		{
+          "dimensionName": "Period",
+          "dimensionTemplate": "PeriodBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "PeriodCSV",
+              "StepDescription": "Period CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Period file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRD_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "String"
+            },
+			{
+              "StepID": "2",
+              "StepName": "PeriodPrevCSV",
+              "StepDescription": "PeriodPrev CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Period Prev file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRD_DIM_PREV",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+		{
+          "dimensionName": "Product",
+          "dimensionTemplate": "ProductBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "ProductCSV",
+              "StepDescription": "Product CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Product file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRDC_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.ProductExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "factName": "SalesFacts",
+          "factTemplate": "RMS Sales Facts",
+          "configuration": {
+            "Mode": "Overwrite/Append",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "ADLS",
+            "RunParellel": "Yes/No"
+          },
+          "extract": [
+            {
+              "Source": "trag_aggregated_data"
+            }
+          ],
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "trag_aggregated_data",
+              "StepDescription": "PRODUCT",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "CREATE TEMPORARY TABLE",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "String",
+              "StepOutputName": "trag_aggregated_data",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FactExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+        {
+          "factName": "UniverseFacts",
+          "factTemplate": "RMS Universe Facts",
+          "configuration": {
+            "Mode": "Append",
+            "config": "repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "ADLS",
+            "RunParellel": "Yes"
+          },
+          "extract": [
+            {
+              "Source": "trag_universe_data"
+            }
+          ],
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "trag_universe_data",
+              "StepDescription": "trag_universe_data",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "CREATE TEMPORARY TABLE",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "String",
+              "StepOutputName": "trag_universe_data",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FactExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
