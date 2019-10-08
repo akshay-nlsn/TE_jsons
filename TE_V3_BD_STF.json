@@ -56,7 +56,7 @@
           "tableName": "trag_universe_data",
           "tableSourceDataId": "factory",
           "appendReplace": "replace",
-          "tableQuery": "select * from fg_snspazuna_1000575.trag_universe_data",
+          "tableQuery": "select * from fg_snspazuna_1000233.trag_universe_data",
           "tableValidationError": "PREVIOUS|REJECT",
           "columns": [
             {
