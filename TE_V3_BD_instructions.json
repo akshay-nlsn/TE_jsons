@@ -16,11 +16,11 @@
   "solutionType": "RMS",
   "sourceDBNames":{
      "fg_name":[
-        "fg_snspazuna_1000233"
+        "fg_snspazuna_1000573"
      ],
      "mt_name":[]
   },
-  "physicalReportableDBName": "PQM_1000233_test_akshay",
+  "physicalReportableDBName": "PQM_COKE_1000573_RMS",
   "excludeFacts": [
     "795",
     "235",
