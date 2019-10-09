@@ -175,6 +175,147 @@
                 "className": "com.nielsen.te.v3.core.executors.FileToDimension"
               },
               "StepTarget": "String"
+            },
+			{
+              "StepID": "2",
+              "StepName": "PeriodPrevCSV",
+              "StepDescription": "PeriodPrev CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Period Prev file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRD_DIM_PREV",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+		{
+          "dimensionName": "Product",
+          "dimensionTemplate": "ProductBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "ProductCSV",
+              "StepDescription": "Product CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Product file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRDC_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.ProductExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "factName": "SalesFacts",
+          "factTemplate": "RMS Sales Facts",
+          "configuration": {
+            "Mode": "Overwrite/Append",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "ADLS",
+            "RunParellel": "Yes/No"
+          },
+          "extract": [
+            {
+              "Source": "trag_aggregated_data"
+            }
+          ],
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "trag_aggregated_data",
+              "StepDescription": "PRODUCT",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "CREATE TEMPORARY TABLE",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "String",
+              "StepOutputName": "trag_aggregated_data",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FactExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+        {
+          "factName": "UniverseFacts",
+          "factTemplate": "RMS Universe Facts",
+          "configuration": {
+            "Mode": "Append",
+            "config": "repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "ADLS",
+            "RunParellel": "Yes"
+          },
+          "extract": [
+            {
+              "Source": "trag_universe_data"
+            }
+          ],
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "trag_universe_data",
+              "StepDescription": "trag_universe_data",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "CREATE TEMPORARY TABLE",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "String",
+              "StepOutputName": "trag_universe_data",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FactExecutor"
+              },
+              "StepTarget": "String"
             }
           ]
         }

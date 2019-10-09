@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e722c5a-d6ce-41d4-9285-b4c126a93c24" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/TE_V3_BD_STF.json" beforeDir="false" afterPath="$PROJECT_DIR$/TE_V3_BD_STF.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_logs/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run_logs/out.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +25,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TE_V3_BD_STF.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2080">
-              <caret line="83" column="59" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="59" />
+            <state relative-caret-position="234">
+              <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
               <folding>
-                <element signature="e#1408#2230#0" />
+                <element signature="e#3143#4320#0" />
+                <element signature="e#4691#5478#0" />
               </folding>
             </state>
           </provider>
@@ -149,10 +151,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TE_V3_BD_STF.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2080">
-          <caret line="83" column="59" selection-start-line="83" selection-start-column="59" selection-end-line="83" selection-end-column="59" />
+        <state relative-caret-position="234">
+          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
           <folding>
-            <element signature="e#1408#2230#0" />
+            <element signature="e#3143#4320#0" />
+            <element signature="e#4691#5478#0" />
           </folding>
         </state>
       </provider>
