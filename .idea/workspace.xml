@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e722c5a-d6ce-41d4-9285-b4c126a93c24" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/TE_V3_BD_STF.json" beforeDir="false" afterPath="$PROJECT_DIR$/TE_V3_BD_STF.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_logs/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run_logs/out.txt" afterDir="false" />
-    </list>
+    <list default="true" id="1e722c5a-d6ce-41d4-9285-b4c126a93c24" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="203" />
     <option name="width" value="1440" />
     <option name="height" value="836" />
@@ -115,7 +112,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="203" width="1440" height="836" extended-state="0" />
+    <frame x="0" y="203" width="1440" height="836" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />

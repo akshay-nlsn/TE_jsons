@@ -27,7 +27,81 @@
     },
     "physical": {
       "tables": [
-        
+        {
+          "tableName": "trag_aggregated_data",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000573.trag_universe_data",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "agd_mah_id",
+              "columnHeader": "agd_mah_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "agd_tpr_id",
+              "columnHeader": "agd_tpr_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        },
+        {
+          "tableName": "trag_universe_data",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000573.trag_universe_data",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "agd_mah_id",
+              "columnHeader": "agd_mah_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "agd_tpr_id",
+              "columnHeader": "agd_tpr_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        },
+        {
+          "tableName": "trds_data_scope_output_fact",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000573.trds_data_scope_output_fact",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "dof_fds_id",
+              "columnHeader": "dof_fds_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "dof_ouf_id",
+              "columnHeader": "dof_ouf_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        }
       ]
     },
     "logical": {
