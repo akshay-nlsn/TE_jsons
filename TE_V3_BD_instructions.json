@@ -20,7 +20,7 @@
      ],
      "mt_name":[]
   },
-  "physicalReportableDBName": "PQM/RMS_1000233_PQM",
+  "physicalReportableDBName": "RMS_1000233_PQM",
   "excludeFacts": [
     "795",
     "235",

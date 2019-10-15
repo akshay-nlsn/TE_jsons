@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e722c5a-d6ce-41d4-9285-b4c126a93c24" name="Default Changelist" comment="" />
+    <list default="true" id="1e722c5a-d6ce-41d4-9285-b4c126a93c24" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/run_logs/out.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run_logs/out.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/TE_V3_BD_STF.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+              <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
               <folding>
                 <element signature="e#3143#4320#0" />
                 <element signature="e#4691#5478#0" />
@@ -113,7 +115,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="203" width="1440" height="836" extended-state="1" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -149,7 +150,7 @@
     <entry file="file://$PROJECT_DIR$/TE_V3_BD_STF.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="106" column="16" lean-forward="true" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding>
             <element signature="e#3143#4320#0" />
             <element signature="e#4691#5478#0" />
