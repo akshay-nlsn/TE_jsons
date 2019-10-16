@@ -1,0 +1,776 @@
+19/10/16 16:29:29 INFO StaticConf$: DB_HOME: /databricks
+19/10/16 16:29:30 INFO DriverDaemon$: ========== driver starting up ==========
+19/10/16 16:29:30 INFO DriverDaemon$: Java: Oracle Corporation 1.8.0_191
+19/10/16 16:29:30 INFO DriverDaemon$: OS: Linux/amd64 4.15.0-1050-azure
+19/10/16 16:29:30 INFO DriverDaemon$: CWD: /databricks/driver
+19/10/16 16:29:30 INFO DriverDaemon$: Mem: Max: 97.3G loaded GCs: PS Scavenge, PS MarkSweep
+19/10/16 16:29:30 INFO DriverDaemon$: Logging multibyte characters: ✓
+19/10/16 16:29:30 INFO DriverDaemon$: 'publicFile' appender in root logger: class com.databricks.logging.RedactionRollingFileAppender
+19/10/16 16:29:30 INFO DriverDaemon$: 'org.apache.log4j.Appender' appender in root logger: class com.codahale.metrics.log4j.InstrumentedAppender
+19/10/16 16:29:30 INFO DriverDaemon$: 'null' appender in root logger: class com.databricks.logging.RequestTracker
+19/10/16 16:29:30 INFO DriverDaemon$: == Modules:
+19/10/16 16:29:30 INFO DriverDaemon$: Starting prometheus metrics log export timer
+19/10/16 16:29:30 INFO DriverDaemon$: Universe Git Hash: 7201322412393895429516835306b6ef047d0688
+19/10/16 16:29:30 INFO DriverDaemon$: Spark Git Hash: a937effdb77c94e1293f1fa405f29834568a066a
+19/10/16 16:29:30 WARN RunHelpers$: Missing tag isolation client: java.util.NoSuchElementException: key not found: TagDefinition(clientType,The client type for a request, used for isolating resources for the request.)
+19/10/16 16:29:30 INFO DatabricksILoop$: Creating throwaway interpreter
+19/10/16 16:29:30 INFO SparkConfUtils$: Customize spark config according to file /tmp/custom-spark.conf
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.sql.warehouse.dir -> adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionPassword -> 560I890@fd80709
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.credential -> viUHaEfNg8cHQRJSRNMzpIv1T6goiUg+c9R/XSbYBFA=
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionDriverName -> org.postgresql.Driver
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.databricks.acl.dfAclsEnabled -> false
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.driver.tempDirectory -> /local_disk0/tmp
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.maxIdle -> 1
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.client.id -> 003106c3-ff8c-4c62-a060-24b8b32ea512
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.refresh.url -> https://login.microsoftonline.com/6ac7a1f4-5fb1-4153-bb4f-12d2020a1f7d/oauth2/token
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.executor.tempDirectory -> /local_disk0/tmp
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.databricks.delta.preview.enabled -> true
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.task.maxFailures -> 10
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.sql.hive.metastore.jars -> maven
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.databricks.aggressiveWindowDownS -> 300
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionUserName -> tedbuat
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.databricks.sql.hive.msck.batchSize -> 200
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionURL -> jdbc:postgresql://uathmsdb.trans.enterprisecsp.net:5432/hive_adls
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: datanucleus.fixedDatastore -> false
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.databricks.sql.hive.msck.parallelism -> 20
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.maxPoolSize -> 30
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.minPoolSize -> 15
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.sql.parquet.filterPushdown -> false
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.access.token.provider.type -> ClientCredential
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.sql.shuffle.partitions -> 2000
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.driver.maxResultSize -> 0
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: fs.azure.account.key.teuatsa.blob.core.windows.net -> IsrxMnnzLeO9N44beU4eMw0LaiKJdi1hHmKZFUiPa8nFNKZAFyhH0Hv/UCoC4qhgcdq63zwTRGFhUKV9d4ZsBw==
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: datanucleus.autoCreateSchema -> true
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.hadoop.fs.adl.impl.disable.cache -> false
+19/10/16 16:29:30 INFO SparkConfUtils$: new spark config: spark.sql.hive.metastore.version -> 2.3.0
+19/10/16 16:29:30 WARN MetastoreMonitor$: Uri scheme postgresql is not supported.
+19/10/16 16:29:30 WARN MetastoreMonitor$: Unexpected partial metastore configuration (userOpt=Some(tedbuat), pw.isDefined=true, uriOpt=None)
+19/10/16 16:29:30 INFO MetastoreMonitor$: Generic external metastore configurd (config=jdbc:postgresql://uathmsdb.trans.enterprisecsp.net:5432/hive_adls)
+19/10/16 16:29:30 INFO MetastoreMonitor: Not monitoring ExternalGenericMetastore
+19/10/16 16:29:30 INFO JettyClient$: Creating new HttpClient with SSLContextFactory=None,maxRequestHeaderSize=65536, namePrefix=Some(DriverDaemon), idleTimeout=2 hours
+19/10/16 16:29:31 INFO DriverCorral: Creating the driver context
+19/10/16 16:29:31 INFO DatabricksILoop$: Class Server Dir: /local_disk0/tmp/repl/spark-1140654836700401966-b9aa8a23-124a-43bd-9475-0df6f33f163f
+19/10/16 16:29:31 INFO SparkConfUtils$: Customize spark config according to file /tmp/custom-spark.conf
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.sql.warehouse.dir -> adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionPassword -> 560I890@fd80709
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.credential -> viUHaEfNg8cHQRJSRNMzpIv1T6goiUg+c9R/XSbYBFA=
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionDriverName -> org.postgresql.Driver
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.databricks.acl.dfAclsEnabled -> false
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.driver.tempDirectory -> /local_disk0/tmp
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.maxIdle -> 1
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.client.id -> 003106c3-ff8c-4c62-a060-24b8b32ea512
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.refresh.url -> https://login.microsoftonline.com/6ac7a1f4-5fb1-4153-bb4f-12d2020a1f7d/oauth2/token
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.executor.tempDirectory -> /local_disk0/tmp
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.databricks.delta.preview.enabled -> true
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.task.maxFailures -> 10
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.sql.hive.metastore.jars -> maven
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.databricks.aggressiveWindowDownS -> 300
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionUserName -> tedbuat
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.databricks.sql.hive.msck.batchSize -> 200
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionURL -> jdbc:postgresql://uathmsdb.trans.enterprisecsp.net:5432/hive_adls
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: datanucleus.fixedDatastore -> false
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.databricks.sql.hive.msck.parallelism -> 20
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.maxPoolSize -> 30
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.minPoolSize -> 15
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.sql.parquet.filterPushdown -> false
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.access.token.provider.type -> ClientCredential
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.sql.shuffle.partitions -> 2000
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.driver.maxResultSize -> 0
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: fs.azure.account.key.teuatsa.blob.core.windows.net -> IsrxMnnzLeO9N44beU4eMw0LaiKJdi1hHmKZFUiPa8nFNKZAFyhH0Hv/UCoC4qhgcdq63zwTRGFhUKV9d4ZsBw==
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: datanucleus.autoCreateSchema -> true
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.hadoop.fs.adl.impl.disable.cache -> false
+19/10/16 16:29:31 INFO SparkConfUtils$: new spark config: spark.sql.hive.metastore.version -> 2.3.0
+19/10/16 16:29:31 WARN SparkConf: The configuration key 'spark.scheduler.listenerbus.eventqueue.size' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.scheduler.listenerbus.eventqueue.capacity' instead.
+19/10/16 16:29:31 WARN SparkConf: The configuration key 'spark.akka.frameSize' has been deprecated as of Spark 1.6 and may be removed in the future. Please use the new key 'spark.rpc.message.maxSize' instead.
+19/10/16 16:29:31 INFO SparkContext: Running Spark version 2.4.0
+19/10/16 16:29:31 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction, spark.shuffle.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+19/10/16 16:29:31 INFO SparkContext: Submitted application: Databricks Shell
+19/10/16 16:29:31 INFO SparkContext: Spark configuration:
+datanucleus.autoCreateSchema=true
+datanucleus.fixedDatastore=false
+eventLog.rolloverIntervalSeconds=3600
+fs.azure.account.key.teuatsa.blob.core.windows.net=IsrxMnnzLeO9N44beU4eMw0LaiKJdi1hHmKZFUiPa8nFNKZAFyhH0Hv/UCoC4qhgcdq63zwTRGFhUKV9d4ZsBw==
+spark.akka.frameSize=256
+spark.app.name=Databricks Shell
+spark.cleaner.referenceTracking.blocking=false
+spark.databricks.acl.client=com.databricks.spark.sql.acl.client.SparkSqlAclClient
+spark.databricks.acl.dfAclsEnabled=false
+spark.databricks.acl.provider=com.databricks.sql.acl.ReflectionBackedAclProvider
+spark.databricks.aggressiveWindowDownS=300
+spark.databricks.cloudProvider=Azure
+spark.databricks.clusterSource=JOB
+spark.databricks.clusterUsageTags.autoTerminationMinutes=0
+spark.databricks.clusterUsageTags.clusterAggressiveAutoscalingWindowDownSeconds=300
+spark.databricks.clusterUsageTags.clusterAllTags=[{"key":"Vendor","value":"Databricks"},{"key":"Creator","value":"basheer.ahamed@nielsen.com"},{"key":"ClusterName","value":"job-67847-run-1"},{"key":"ClusterId","value":"1016-162606-calls683"},{"key":"DatabricksEnvironment","value":"workerenv-5614106561397268"}]
+spark.databricks.clusterUsageTags.clusterCreator=JobLauncher
+spark.databricks.clusterUsageTags.clusterGeneration=0
+spark.databricks.clusterUsageTags.clusterId=1016-162606-calls683
+spark.databricks.clusterUsageTags.clusterLogDeliveryEnabled=true
+spark.databricks.clusterUsageTags.clusterLogDestination=dbfs:/mnt/te_mount/uat_logs/
+spark.databricks.clusterUsageTags.clusterMaxWorkers=5
+spark.databricks.clusterUsageTags.clusterMetastoreAccessType=RDS_DIRECT
+spark.databricks.clusterUsageTags.clusterMinWorkers=1
+spark.databricks.clusterUsageTags.clusterName=job-67847-run-1
+spark.databricks.clusterUsageTags.clusterNoDriverDaemon=false
+spark.databricks.clusterUsageTags.clusterNodeType=Standard_E16s_v3
+spark.databricks.clusterUsageTags.clusterNumSshKeys=0
+spark.databricks.clusterUsageTags.clusterOwnerOrgId=5614106561397268
+spark.databricks.clusterUsageTags.clusterOwnerUserId=*********(redacted)
+spark.databricks.clusterUsageTags.clusterPinned=false
+spark.databricks.clusterUsageTags.clusterPythonVersion=2
+spark.databricks.clusterUsageTags.clusterResourceClass=default
+spark.databricks.clusterUsageTags.clusterScalingType=autoscaling
+spark.databricks.clusterUsageTags.clusterSku=STANDARD_SKU
+spark.databricks.clusterUsageTags.clusterState=Pending
+spark.databricks.clusterUsageTags.clusterStateMessage=Starting Spark
+spark.databricks.clusterUsageTags.clusterTargetWorkers=1
+spark.databricks.clusterUsageTags.clusterWorkers=1
+spark.databricks.clusterUsageTags.containerType=LXC
+spark.databricks.clusterUsageTags.driverContainerId=5b31d59b97624f57b7d90c00d4af10a5
+spark.databricks.clusterUsageTags.driverContainerPrivateIp=10.139.64.27
+spark.databricks.clusterUsageTags.driverInstanceId=065e5432c3d543ef903af9702b6393b1
+spark.databricks.clusterUsageTags.driverInstancePrivateIp=10.139.0.17
+spark.databricks.clusterUsageTags.driverNodeType=Standard_E16s_v3
+spark.databricks.clusterUsageTags.driverPublicDns=52.177.123.83
+spark.databricks.clusterUsageTags.enableCredentialPassthrough=*********(redacted)
+spark.databricks.clusterUsageTags.enableDfAcls=false
+spark.databricks.clusterUsageTags.enableElasticDisk=true
+spark.databricks.clusterUsageTags.enableJdbcAutoStart=true
+spark.databricks.clusterUsageTags.enableJobsAutostart=true
+spark.databricks.clusterUsageTags.enableLocalDiskEncryption=false
+spark.databricks.clusterUsageTags.enableSqlAclsOnly=false
+spark.databricks.clusterUsageTags.hailEnabled=false
+spark.databricks.clusterUsageTags.isSingleUserCluster=*********(redacted)
+spark.databricks.clusterUsageTags.numPerClusterInitScriptsV2=0
+spark.databricks.clusterUsageTags.sparkVersion=5.2.x-scala2.11
+spark.databricks.clusterUsageTags.userProvidedRemoteVolumeCount=*********(redacted)
+spark.databricks.clusterUsageTags.userProvidedRemoteVolumeSizeGb=*********(redacted)
+spark.databricks.clusterUsageTags.userProvidedRemoteVolumeType=*********(redacted)
+spark.databricks.clusterUsageTags.workerEnvironmentId=workerenv-5614106561397268
+spark.databricks.credential.redactor=*********(redacted)
+spark.databricks.delta.logStore.crossCloud.fatal=true
+spark.databricks.delta.multiClusterWrites.enabled=true
+spark.databricks.delta.preview.enabled=true
+spark.databricks.driverNodeTypeId=Standard_E16s_v3
+spark.databricks.eventLog.dir=eventlogs
+spark.databricks.io.directoryCommit.enableLogicalDelete=false
+spark.databricks.overrideDefaultCommitProtocol=org.apache.spark.sql.execution.datasources.SQLHadoopMapReduceCommitProtocol
+spark.databricks.passthrough.adls.tokenProviderClassName=*********(redacted)
+spark.databricks.passthrough.s3a.tokenProviderClassName=*********(redacted)
+spark.databricks.preemption.enabled=true
+spark.databricks.r.cleanWorkspace=true
+spark.databricks.redactor=com.databricks.spark.util.DatabricksSparkLogRedactorProxy
+spark.databricks.session.share=false
+spark.databricks.sparkContextId=1140654836700401966
+spark.databricks.sql.hive.msck.batchSize=200
+spark.databricks.sql.hive.msck.parallelism=20
+spark.databricks.tahoe.logStore.aws.class=com.databricks.tahoe.store.MultiClusterLogStore
+spark.databricks.tahoe.logStore.azure.class=com.databricks.tahoe.store.AzureLogStore
+spark.databricks.tahoe.logStore.class=com.databricks.tahoe.store.DelegatingLogStore
+spark.databricks.workerNodeTypeId=Standard_E16s_v3
+spark.driver.allowMultipleContexts=false
+spark.driver.maxResultSize=0
+spark.driver.tempDirectory=/local_disk0/tmp
+spark.eventLog.enabled=false
+spark.executor.extraClassPath=*********(redacted)
+spark.executor.extraJavaOptions=-Djava.io.tmpdir=/local_disk0/tmp -XX:ReservedCodeCacheSize=256m -XX:+UseCodeCacheFlushing -Djava.security.properties=/databricks/spark/dbconf/java/extra.security -XX:+PrintFlagsFinal -XX:+PrintGCDateStamps -verbose:gc -XX:+PrintGCDetails -Xss4m -Djavax.xml.datatype.DatatypeFactory=com.sun.org.apache.xerces.internal.jaxp.datatype.DatatypeFactoryImpl -Djavax.xml.parsers.DocumentBuilderFactory=com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl -Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl -Djavax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema=com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory -Dorg.xml.sax.driver=com.sun.org.apache.xerces.internal.parsers.SAXParser -Dorg.w3c.dom.DOMImplementationSourceList=com.sun.org.apache.xerces.internal.dom.DOMXSImplementationSourceImpl -Ddatabricks.serviceName=spark-executor-1
+spark.executor.memory=97871m
+spark.executor.tempDirectory=/local_disk0/tmp
+spark.extraListeners=com.databricks.backend.daemon.driver.DBCEventLoggingListener
+spark.files.fetchFailure.unRegisterOutputOnHost=true
+spark.files.overwrite=true
+spark.files.useFetchCache=false
+spark.hadoop.databricks.dbfs.client.version=v2
+spark.hadoop.databricks.s3commit.client.sslTrustAll=false
+spark.hadoop.datanucleus.connectionPool.maxIdle=1
+spark.hadoop.datanucleus.connectionPool.maxPoolSize=30
+spark.hadoop.datanucleus.connectionPool.minPoolSize=15
+spark.hadoop.dfs.adls.oauth2.access.token.provider.type=*********(redacted)
+spark.hadoop.dfs.adls.oauth2.client.id=*********(redacted)
+spark.hadoop.dfs.adls.oauth2.credential=*********(redacted)
+spark.hadoop.dfs.adls.oauth2.refresh.url=*********(redacted)
+spark.hadoop.fs.abfs.impl=shaded.databricks.v20180920_b33d810.org.apache.hadoop.fs.azurebfs.AzureBlobFileSystem
+spark.hadoop.fs.abfs.impl.disable.cache=true
+spark.hadoop.fs.abfss.impl=shaded.databricks.v20180920_b33d810.org.apache.hadoop.fs.azurebfs.SecureAzureBlobFileSystem
+spark.hadoop.fs.abfss.impl.disable.cache=true
+spark.hadoop.fs.adl.impl=com.databricks.adl.AdlFileSystem
+spark.hadoop.fs.adl.impl.disable.cache=false
+spark.hadoop.fs.azure.skip.metrics=true
+spark.hadoop.fs.s3.impl=com.databricks.s3a.S3AFileSystem
+spark.hadoop.fs.s3a.connection.maximum=200
+spark.hadoop.fs.s3a.fast.upload=true
+spark.hadoop.fs.s3a.fast.upload.default=true
+spark.hadoop.fs.s3a.impl=com.databricks.s3a.S3AFileSystem
+spark.hadoop.fs.s3a.multipart.size=10485760
+spark.hadoop.fs.s3a.multipart.threshold=104857600
+spark.hadoop.fs.s3a.threads.max=136
+spark.hadoop.fs.s3n.impl=com.databricks.s3a.S3AFileSystem
+spark.hadoop.fs.wasb.impl=shaded.databricks.org.apache.hadoop.fs.azure.NativeAzureFileSystem
+spark.hadoop.fs.wasb.impl.disable.cache=true
+spark.hadoop.fs.wasbs.impl=shaded.databricks.org.apache.hadoop.fs.azure.NativeAzureFileSystem
+spark.hadoop.fs.wasbs.impl.disable.cache=true
+spark.hadoop.hive.server2.idle.operation.timeout=7200000
+spark.hadoop.hive.server2.idle.session.timeout=900000
+spark.hadoop.hive.server2.keystore.password=*********(redacted)
+spark.hadoop.hive.server2.keystore.path=/databricks/keys/jetty-ssl-driver-keystore.jks
+spark.hadoop.hive.server2.session.check.interval=60000
+spark.hadoop.hive.server2.thrift.http.port=10000
+spark.hadoop.hive.server2.transport.mode=http
+spark.hadoop.hive.server2.use.SSL=true
+spark.hadoop.hive.warehouse.subdir.inherit.perms=false
+spark.hadoop.javax.jdo.option.ConnectionDriverName=org.postgresql.Driver
+spark.hadoop.javax.jdo.option.ConnectionPassword=*********(redacted)
+spark.hadoop.javax.jdo.option.ConnectionURL=*********(redacted)
+spark.hadoop.javax.jdo.option.ConnectionUserName=*********(redacted)
+spark.hadoop.mapred.output.committer.class=com.databricks.backend.daemon.data.client.DirectOutputCommitter
+spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version=2
+spark.hadoop.parquet.memory.pool.ratio=0.5
+spark.hadoop.spark.sql.parquet.output.committer.class=org.apache.spark.sql.parquet.DirectParquetOutputCommitter
+spark.hadoop.spark.sql.sources.outputCommitterClass=com.databricks.backend.daemon.data.client.MapReduceDirectOutputCommitter
+spark.hadoop.spark.thriftserver.customHeadersToProperties=*********(redacted)
+spark.home=/databricks/spark
+spark.logConf=true
+spark.master=spark://10.139.64.27:7077
+spark.metrics.conf=/databricks/spark/conf/metrics.properties
+spark.r.backendConnectionTimeout=604800
+spark.r.numRBackendThreads=1
+spark.rdd.compress=true
+spark.repl.class.outputDir=/local_disk0/tmp/repl/spark-1140654836700401966-b9aa8a23-124a-43bd-9475-0df6f33f163f
+spark.scheduler.listenerbus.eventqueue.size=20000
+spark.scheduler.mode=FAIR
+spark.serializer.objectStreamReset=100
+spark.shuffle.manager=SORT
+spark.shuffle.memoryFraction=0.2
+spark.shuffle.reduceLocality.enabled=false
+spark.shuffle.service.enabled=true
+spark.shuffle.service.port=4048
+spark.sparkr.use.daemon=false
+spark.speculation=false
+spark.speculation.multiplier=3
+spark.speculation.quantile=0.9
+spark.sql.allowMultipleContexts=false
+spark.sql.hive.convertCTAS=true
+spark.sql.hive.convertMetastoreParquet=true
+spark.sql.hive.metastore.jars=maven
+spark.sql.hive.metastore.sharedPrefixes=org.mariadb.jdbc,com.mysql.jdbc,org.postgresql,com.microsoft.sqlserver,microsoft.sql.DateTimeOffset,microsoft.sql.Types,com.databricks,com.codahale,com.fasterxml.jackson,shaded.databricks
+spark.sql.hive.metastore.version=2.3.0
+spark.sql.parquet.cacheMetadata=true
+spark.sql.parquet.compression.codec=snappy
+spark.sql.parquet.filterPushdown=false
+spark.sql.shuffle.partitions=2000
+spark.sql.sources.commitProtocolClass=com.databricks.sql.transaction.directory.DirectoryAtomicCommitProtocol
+spark.sql.streaming.checkpointFileManagerClass=com.databricks.spark.sql.streaming.DatabricksCheckpointFileManager
+spark.sql.ui.retainedExecutions=100
+spark.sql.warehouse.dir=*********(redacted)
+spark.storage.blockManagerTimeoutIntervalMs=300000
+spark.storage.memoryFraction=0.5
+spark.streaming.driver.writeAheadLog.allowBatching=true
+spark.streaming.driver.writeAheadLog.closeFileAfterWrite=true
+spark.task.maxFailures=10
+spark.task.reaper.enabled=true
+spark.task.reaper.killTimeout=60s
+spark.ui.port=46333
+spark.worker.cleanup.enabled=false
+19/10/16 16:29:31 INFO SecurityManager: Changing view acls to: root
+19/10/16 16:29:31 INFO SecurityManager: Changing modify acls to: root
+19/10/16 16:29:31 INFO SecurityManager: Changing view acls groups to: 
+19/10/16 16:29:31 INFO SecurityManager: Changing modify acls groups to: 
+19/10/16 16:29:31 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+19/10/16 16:29:32 INFO Utils: Successfully started service 'sparkDriver' on port 40677.
+19/10/16 16:29:32 INFO SparkEnv: Registering MapOutputTracker
+19/10/16 16:29:32 INFO SparkEnv: Registering BlockManagerMaster
+19/10/16 16:29:32 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/10/16 16:29:32 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/10/16 16:29:32 INFO DiskBlockManager: Created local directory at /local_disk0/blockmgr-c321bde9-c31b-4423-ab53-5a6fcb4bfabd
+19/10/16 16:29:32 INFO MemoryStore: MemoryStore started with capacity 54.2 GB
+19/10/16 16:29:32 INFO SparkEnv: Registering OutputCommitCoordinator
+19/10/16 16:29:32 WARN MetricsSystem: Using default name SparkStatusTracker for source because neither spark.metrics.namespace nor spark.app.id is set.
+19/10/16 16:29:32 INFO log: Logging initialized @4667ms
+19/10/16 16:29:32 INFO Server: jetty-9.3.20.v20170531
+19/10/16 16:29:32 INFO Server: Started @4782ms
+19/10/16 16:29:32 INFO AbstractConnector: Started ServerConnector@6f2e1024{HTTP/1.1,[http/1.1]}{10.139.64.27:46333}
+19/10/16 16:29:32 INFO Utils: Successfully started service 'SparkUI' on port 46333.
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@107bfcb2{/jobs,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@43982337{/jobs/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@5b275811{/jobs/job,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@6f044c58{/jobs/job/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@6d074b14{/stages,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@c017175{/stages/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@559cedee{/stages/stage,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@4832f03b{/stages/stage/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@7af3874e{/stages/pool,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@5a8816cc{/stages/pool/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@68565bc7{/storage,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@37baddde{/storage/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@5115f590{/storage/rdd,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@4b31a708{/storage/rdd/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@11e355ca{/environment,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@70d63e05{/environment/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@e11ecfa{/executors,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@485e13d7{/executors/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@43984213{/executors/threadDump,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@2ff7a73{/executors/threadDump/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@38830ea{/executors/heapHistogram,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@3b705be7{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@3a790e40{/static,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@3762c4fc{/,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@77ab22be{/api,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@141d3d43{/jobs/job/kill,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@6ca372ef{/stages/stage/kill,null,AVAILABLE,@Spark}
+19/10/16 16:29:32 INFO SparkUI: Bound SparkUI to 10.139.64.27, and started at http://10.139.64.27:46333
+19/10/16 16:29:32 WARN FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/16 16:29:32 INFO FairSchedulableBuilder: Created default pool: default, schedulingMode: FIFO, minShare: 0, weight: 1
+19/10/16 16:29:32 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://10.139.64.27:7077...
+19/10/16 16:29:32 INFO TransportClientFactory: Successfully created connection to /10.139.64.27:7077 after 44 ms (0 ms spent in bootstraps)
+19/10/16 16:29:32 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20191016162932-0000
+19/10/16 16:29:32 INFO TaskSchedulerImpl: Task preemption enabled.
+19/10/16 16:29:32 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38189.
+19/10/16 16:29:32 INFO NettyBlockTransferService: Server created on 10.139.64.27:38189
+19/10/16 16:29:32 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20191016162932-0000/0 on worker-20191016162932-10.139.64.16-35703 (10.139.64.16:35703) with 16 core(s)
+19/10/16 16:29:32 INFO StandaloneSchedulerBackend: Granted executor ID app-20191016162932-0000/0 on hostPort 10.139.64.16:35703 with 16 core(s), 95.6 GB RAM
+19/10/16 16:29:32 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/10/16 16:29:32 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.139.64.27, 38189, None)
+19/10/16 16:29:32 INFO BlockManagerMasterEndpoint: Registering block manager 10.139.64.27:38189 with 54.2 GB RAM, BlockManagerId(driver, 10.139.64.27, 38189, None)
+19/10/16 16:29:32 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.139.64.27, 38189, None)
+19/10/16 16:29:32 INFO BlockManager: external shuffle service port = 4048
+19/10/16 16:29:32 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.139.64.27, 38189, None)
+19/10/16 16:29:33 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20191016162932-0000/0 is now RUNNING
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@3ddb774f{/metrics/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO DBCEventLoggingListener: Initializing DBCEventLoggingListener
+19/10/16 16:29:33 INFO DBCEventLoggingListener: Logging events to eventlogs/1140654836700401966/eventlog
+19/10/16 16:29:33 INFO SparkContext: Registered listener com.databricks.backend.daemon.driver.DBCEventLoggingListener
+19/10/16 16:29:33 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+19/10/16 16:29:33 INFO SparkContext: Loading Spark Service RPC Server
+19/10/16 16:29:33 INFO SparkServiceRPCServer: Spark Service RPC Server is disabled.
+19/10/16 16:29:33 INFO DatabricksILoop$: Successfully registered spark metrics in Prometheus registry
+19/10/16 16:29:33 INFO DatabricksILoop$: Successfully initialized SparkContext
+19/10/16 16:29:33 INFO SharedState: Scheduler stats enabled.
+19/10/16 16:29:33 INFO SharedState: loading hive config file: file:/databricks/hive/conf/hive-site.xml
+19/10/16 16:29:33 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse').
+19/10/16 16:29:33 INFO SharedState: Warehouse path is 'adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse'.
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@44dc7b7d{/SQL,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@15fb4566{/SQL/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@41b64020{/SQL/execution,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@1a538ed8{/SQL/execution/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@3cdc7b09{/static/sql,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@738d37fc{/storage/iocache,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@6fa2448b{/storage/iocache/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:33 INFO LogStore: LogStore class: class com.databricks.tahoe.store.DelegatingLogStore
+19/10/16 16:29:34 INFO DatabricksILoop$: Finished creating throwaway interpreter
+19/10/16 16:29:34 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+19/10/16 16:29:35 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.139.64.16:34318) with ID 0
+19/10/16 16:29:35 INFO BlockManagerMasterEndpoint: Registering block manager 10.139.64.16:43905 with 50.8 GB RAM, BlockManagerId(0, 10.139.64.16, 43905, None)
+19/10/16 16:29:36 INFO HiveUtils: Initializing execution hive, version 1.2.1
+19/10/16 16:29:36 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+19/10/16 16:29:36 INFO ObjectStore: ObjectStore, initialize called
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.datanucleus.connectionPool.maxIdle unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.datanucleus.connectionPool.maxPoolSize unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.datanucleus.connectionPool.minPoolSize unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionDriverName unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionURL unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionUserName unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionPassword unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+19/10/16 16:29:36 INFO Persistence: Property datanucleus.schema.autoCreateAll unknown - will be ignored
+19/10/16 16:29:38 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+19/10/16 16:29:40 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/16 16:29:40 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/16 16:29:40 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/16 16:29:40 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/16 16:29:41 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+19/10/16 16:29:41 INFO ObjectStore: Initialized ObjectStore
+19/10/16 16:29:41 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+19/10/16 16:29:41 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+19/10/16 16:29:41 INFO HiveMetaStore: Added admin role in metastore
+19/10/16 16:29:41 INFO HiveMetaStore: Added public role in metastore
+19/10/16 16:29:41 INFO HiveMetaStore: No user is added in admin role, since config is empty
+19/10/16 16:29:41 INFO HiveMetaStore: 0: get_all_databases
+19/10/16 16:29:41 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_all_databases	
+19/10/16 16:29:41 INFO HiveMetaStore: 0: get_functions: db=default pat=*
+19/10/16 16:29:41 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+19/10/16 16:29:41 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+19/10/16 16:29:42 INFO JettyClient$: Creating new HttpClient with SSLContextFactory=None,maxRequestHeaderSize=65536, namePrefix=Some(DBFSV2), idleTimeout=2 hours
+19/10/16 16:29:42 WARN EC2MetadataUtils: Unable to retrieve the requested metadata.
+19/10/16 16:29:42 INFO deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+19/10/16 16:29:42 INFO DatabricksFileSystemV2Factory: Creating wasbs file system for wasbs://root@dbstorage5cunvudtvyhjm.blob.core.windows.net
+19/10/16 16:29:42 INFO DBFS: Initialized DBFS with DBFSV2 as the delegate.
+19/10/16 16:29:43 INFO SessionState: Created local directory: /local_disk0/tmp/root
+19/10/16 16:29:43 INFO SessionState: Created local directory: /local_disk0/tmp/5f3cf223-e97d-4a7e-bdcf-88ec38065933_resources
+19/10/16 16:29:43 INFO SessionState: Created HDFS directory: /tmp/hive/root/5f3cf223-e97d-4a7e-bdcf-88ec38065933
+19/10/16 16:29:43 INFO SessionState: Created local directory: /local_disk0/tmp/root/5f3cf223-e97d-4a7e-bdcf-88ec38065933
+19/10/16 16:29:43 INFO SessionState: Created HDFS directory: /tmp/hive/root/5f3cf223-e97d-4a7e-bdcf-88ec38065933/_tmp_space.db
+19/10/16 16:29:43 INFO HiveClientImpl: Warehouse location for Hive client (version 1.2.2) is adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse
+19/10/16 16:29:43 INFO SessionManager: Operation log root directory is created: /local_disk0/tmp/root/operation_logs
+19/10/16 16:29:43 INFO SessionManager: HiveServer2: Background operation thread pool size: 100
+19/10/16 16:29:43 INFO SessionManager: HiveServer2: Background operation thread wait queue size: 100
+19/10/16 16:29:43 INFO SessionManager: HiveServer2: Background operation thread keepalive time: 10 seconds
+19/10/16 16:29:43 INFO AbstractService: Service:OperationManager is inited.
+19/10/16 16:29:43 INFO AbstractService: Service:SessionManager is inited.
+19/10/16 16:29:43 INFO AbstractService: Service: CLIService is inited.
+19/10/16 16:29:43 INFO AbstractService: Service:ThriftHttpCLIService is inited.
+19/10/16 16:29:43 INFO AbstractService: Service: HiveServer2 is inited.
+19/10/16 16:29:43 INFO AbstractService: Service:OperationManager is started.
+19/10/16 16:29:43 INFO AbstractService: Service:SessionManager is started.
+19/10/16 16:29:43 INFO AbstractService: Service:CLIService is started.
+19/10/16 16:29:43 INFO ObjectStore: ObjectStore, initialize called
+19/10/16 16:29:43 INFO Query: Reading in results for query "org.datanucleus.store.rdbms.query.SQLQuery@0" since the connection used is closing
+19/10/16 16:29:43 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+19/10/16 16:29:43 INFO ObjectStore: Initialized ObjectStore
+19/10/16 16:29:43 INFO HiveMetaStore: 0: get_databases: default
+19/10/16 16:29:43 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_databases: default	
+19/10/16 16:29:43 INFO HiveMetaStore: 0: Shutting down the object store...
+19/10/16 16:29:43 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=Shutting down the object store...	
+19/10/16 16:29:43 INFO HiveMetaStore: 0: Metastore shutdown complete.
+19/10/16 16:29:43 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=Metastore shutdown complete.	
+19/10/16 16:29:43 INFO AbstractService: Service:ThriftHttpCLIService is started.
+19/10/16 16:29:43 INFO AbstractService: Service:HiveServer2 is started.
+19/10/16 16:29:43 INFO ThriftCLIService: HTTP Server SSL: adding excluded protocols: [SSLv2, SSLv3]
+19/10/16 16:29:43 INFO ThriftCLIService: HTTP Server SSL: SslContextFactory.getExcludeProtocols = [SSL, SSLv2, SSLv2Hello, SSLv3]
+19/10/16 16:29:43 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@1d1da00b{/sqlserver,null,AVAILABLE,@Spark}
+19/10/16 16:29:43 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@2db4a84a{/sqlserver/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:43 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@73158d35{/sqlserver/session,null,AVAILABLE,@Spark}
+19/10/16 16:29:43 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@55a29589{/sqlserver/session/json,null,AVAILABLE,@Spark}
+19/10/16 16:29:43 INFO DriverDaemon: Starting driver daemon...
+19/10/16 16:29:43 INFO SparkConfUtils$: Customize spark config according to file /tmp/custom-spark.conf
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.sql.warehouse.dir -> adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionPassword -> 560I890@fd80709
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.credential -> viUHaEfNg8cHQRJSRNMzpIv1T6goiUg+c9R/XSbYBFA=
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionDriverName -> org.postgresql.Driver
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.databricks.acl.dfAclsEnabled -> false
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.driver.tempDirectory -> /local_disk0/tmp
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.maxIdle -> 1
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.client.id -> 003106c3-ff8c-4c62-a060-24b8b32ea512
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.refresh.url -> https://login.microsoftonline.com/6ac7a1f4-5fb1-4153-bb4f-12d2020a1f7d/oauth2/token
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.executor.tempDirectory -> /local_disk0/tmp
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.databricks.delta.preview.enabled -> true
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.task.maxFailures -> 10
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.sql.hive.metastore.jars -> maven
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.databricks.aggressiveWindowDownS -> 300
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionUserName -> tedbuat
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.databricks.sql.hive.msck.batchSize -> 200
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.javax.jdo.option.ConnectionURL -> jdbc:postgresql://uathmsdb.trans.enterprisecsp.net:5432/hive_adls
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: datanucleus.fixedDatastore -> false
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.databricks.sql.hive.msck.parallelism -> 20
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.maxPoolSize -> 30
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.datanucleus.connectionPool.minPoolSize -> 15
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.sql.parquet.filterPushdown -> false
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.dfs.adls.oauth2.access.token.provider.type -> ClientCredential
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.sql.shuffle.partitions -> 2000
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.driver.maxResultSize -> 0
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: fs.azure.account.key.teuatsa.blob.core.windows.net -> IsrxMnnzLeO9N44beU4eMw0LaiKJdi1hHmKZFUiPa8nFNKZAFyhH0Hv/UCoC4qhgcdq63zwTRGFhUKV9d4ZsBw==
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: datanucleus.autoCreateSchema -> true
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.hadoop.fs.adl.impl.disable.cache -> false
+19/10/16 16:29:43 INFO SparkConfUtils$: new spark config: spark.sql.hive.metastore.version -> 2.3.0
+19/10/16 16:29:43 WARN SparkConf: The configuration key 'spark.scheduler.listenerbus.eventqueue.size' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.scheduler.listenerbus.eventqueue.capacity' instead.
+19/10/16 16:29:43 WARN SparkConf: The configuration key 'spark.akka.frameSize' has been deprecated as of Spark 1.6 and may be removed in the future. Please use the new key 'spark.rpc.message.maxSize' instead.
+19/10/16 16:29:43 INFO DriverDaemon$$anon$1: Message out thread ready
+19/10/16 16:29:43 INFO Server: jetty-9.3.20.v20170531
+19/10/16 16:29:43 INFO AbstractConnector: Started ServerConnector@238d27ef{HTTP/1.1,[http/1.1]}{0.0.0.0:6061}
+19/10/16 16:29:43 INFO Server: Started @15801ms
+19/10/16 16:29:43 INFO DriverDaemon: Driver daemon started.
+19/10/16 16:29:43 INFO Server: jetty-9.3.20.v20170531
+19/10/16 16:29:43 WARN SecurityHandler: ServletContext@o.e.j.s.ServletContextHandler@3575b9ce{/,null,STARTING} has uncovered http methods for path: /*
+19/10/16 16:29:43 INFO ContextHandler: Started o.e.j.s.ServletContextHandler@3575b9ce{/,null,AVAILABLE}
+19/10/16 16:29:43 INFO SslContextFactory: x509=X509@452aa000(1,h=[databrickscloud.com],w=[]) for SslContextFactory@7c74542b(file:///databricks/keys/jetty-ssl-driver-keystore.jks,null)
+19/10/16 16:29:43 INFO AbstractConnector: Started ServerConnector@342fb153{SSL,[ssl, http/1.1]}{0.0.0.0:10000}
+19/10/16 16:29:43 INFO Server: Started @15925ms
+19/10/16 16:29:43 INFO ThriftCLIService: Started ThriftHttpCLIService in https mode on port 10000 path=/cliservice/* with 5...500 worker threads
+19/10/16 16:29:44 INFO DriverCorral: Loading the root classloader
+19/10/16 16:29:44 INFO DriverCorral: Starting repl ReplId-1bfb5-dd836-99b88
+19/10/16 16:29:44 INFO DriverCorral: Starting repl ReplId-1fdca-00ed3-090b8-2
+19/10/16 16:29:44 INFO SQLDriverWrapper: setupRepl:ReplId-1bfb5-dd836-99b88: finished to load
+19/10/16 16:29:44 INFO SQLDriverWrapper: setupRepl:ReplId-1fdca-00ed3-090b8-2: finished to load
+19/10/16 16:29:44 INFO DriverCorral: Starting repl ReplId-5da79-b1a87-db335-a
+19/10/16 16:29:44 INFO SQLDriverWrapper: setupRepl:ReplId-5da79-b1a87-db335-a: finished to load
+19/10/16 16:29:44 INFO DriverCorral: Starting repl ReplId-7c180-c92a2-36498-5
+19/10/16 16:29:44 INFO SQLDriverWrapper: setupRepl:ReplId-7c180-c92a2-36498-5: finished to load
+19/10/16 16:29:44 INFO DriverCorral: Starting repl ReplId-1219e-59846-44520-8
+19/10/16 16:29:44 INFO SQLDriverWrapper: setupRepl:ReplId-1219e-59846-44520-8: finished to load
+19/10/16 16:29:44 INFO DriverCorral: Starting repl ReplId-4d4a3-28023-5e023-b
+19/10/16 16:29:44 INFO RDriverLocal: 1. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: object created with for ReplId-4d4a3-28023-5e023-b.
+19/10/16 16:29:44 INFO RDriverLocal: 2. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: initializing ...
+19/10/16 16:29:44 INFO RDriverLocal: 3. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: started RBackend thread on port 43603
+19/10/16 16:29:44 INFO RDriverLocal: 4. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: waiting for SparkR to be installed ...
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(org/rogach/scallop_2.11-3.3.1.jar,dbfs:/FileStore/jars/maven/org/rogach/scallop_2.11-3.3.1.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library org/rogach/scallop_2.11-3.3.1.jar as local file /local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar at spark://10.139.64.27:40677/files/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar with timestamp 1571243386355
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar at spark://10.139.64.27:40677/jars/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar with timestamp 1571243386368
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(com/typesafe/config-1.3.1.jar,dbfs:/FileStore/jars/maven/com/typesafe/config-1.3.1.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library com/typesafe/config-1.3.1.jar as local file /local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar at spark://10.139.64.27:40677/files/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar with timestamp 1571243386478
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar at spark://10.139.64.27:40677/jars/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar with timestamp 1571243386487
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(xml-apis/xml-apis-1.0.b2.jar,dbfs:/FileStore/jars/maven/xml-apis/xml-apis-1.0.b2.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library xml-apis/xml-apis-1.0.b2.jar as local file /local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar at spark://10.139.64.27:40677/files/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar with timestamp 1571243386559
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar at spark://10.139.64.27:40677/jars/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar with timestamp 1571243386567
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(dom4j/dom4j-1.6.1.jar,dbfs:/FileStore/jars/maven/dom4j/dom4j-1.6.1.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library dom4j/dom4j-1.6.1.jar as local file /local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar at spark://10.139.64.27:40677/files/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar with timestamp 1571243386634
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar at spark://10.139.64.27:40677/jars/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar with timestamp 1571243386640
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(dbfs:/FileStore/saak9001/pqm_core_models-1.0.jar,dbfs:/FileStore/saak9001/pqm_core_models-1.0.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library dbfs:/FileStore/saak9001/pqm_core_models-1.0.jar as local file /local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar at spark://10.139.64.27:40677/files/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar with timestamp 1571243386811
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar at spark://10.139.64.27:40677/jars/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar with timestamp 1571243386819
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(io/spray/spray-json_2.11-1.3.5.jar,dbfs:/FileStore/jars/maven/io/spray/spray-json_2.11-1.3.5.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library io/spray/spray-json_2.11-1.3.5.jar as local file /local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar at spark://10.139.64.27:40677/files/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar with timestamp 1571243386910
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar at spark://10.139.64.27:40677/jars/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar with timestamp 1571243386917
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(dbfs:/FileStore/saak9001/transengine-1.0-SNAPSHOT.jar,dbfs:/FileStore/saak9001/transengine-1.0-SNAPSHOT.jar,scala)
+19/10/16 16:29:46 INFO LibraryDownloadManager: Downloaded library dbfs:/FileStore/saak9001/transengine-1.0-SNAPSHOT.jar as local file /local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar
+19/10/16 16:29:46 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar)
+19/10/16 16:29:46 INFO SparkContext: Added file /local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar at spark://10.139.64.27:40677/files/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar with timestamp 1571243386987
+19/10/16 16:29:46 INFO Utils: Copying /local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar
+19/10/16 16:29:46 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar at spark://10.139.64.27:40677/jars/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar with timestamp 1571243386996
+19/10/16 16:29:47 INFO LibraryDownloadManager: Downloading a library that was not in the cache: UploadedLibrary(org/scalaj/scalaj-http_2.11-2.3.0.jar,dbfs:/FileStore/jars/maven/org/scalaj/scalaj-http_2.11-2.3.0.jar,scala)
+19/10/16 16:29:47 INFO LibraryDownloadManager: Downloaded library org/scalaj/scalaj-http_2.11-2.3.0.jar as local file /local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar
+19/10/16 16:29:47 INFO SharedDriverContext: Adding libraries that haven't been added before: Set(/local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar)
+19/10/16 16:29:47 INFO SparkContext: Added file /local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar at spark://10.139.64.27:40677/files/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar with timestamp 1571243387070
+19/10/16 16:29:47 INFO Utils: Copying /local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar to /local_disk0/spark-ad81dc08-9241-4ec1-b5c9-4b88ed40c162/userFiles-f1a04264-c3e5-430b-84ea-7a0ce111a90b/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar
+19/10/16 16:29:47 INFO SparkContext: Added JAR /local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar at spark://10.139.64.27:40677/jars/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar with timestamp 1571243387078
+19/10/16 16:29:50 INFO RDriverLocal$: SparkR installation completed.
+19/10/16 16:29:50 INFO RDriverLocal: 5. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: launching R process ...
+19/10/16 16:29:50 INFO RDriverLocal: 6. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: cgroup isolation disabled, not placing R process in REPL cgroup.
+19/10/16 16:29:50 INFO RDriverLocal: 7. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: starting R process on port 32719 (attempt 1) ...
+19/10/16 16:29:51 INFO RDriverLocal: 8. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: R process started with RServe listening on port 32719.
+19/10/16 16:29:51 INFO RDriverLocal: 9. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: setting up BufferedStreamThread with bufferSize: 100.
+19/10/16 16:29:52 INFO RDriverLocal: 10. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: starting interpreter to talk to R process ...
+19/10/16 16:29:53 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+19/10/16 16:29:53 INFO RDriverLocal: 11. RDriverLocal.cda2bc41-b5fb-40c4-b467-63a4fe3f3dda: R interpretter is connected.
+19/10/16 16:29:53 INFO RDriverWrapper: setupRepl:ReplId-4d4a3-28023-5e023-b: finished to load
+19/10/16 16:30:36 INFO DriverCorral: Starting repl ReplId-2e600-f86db-71bcc-c
+19/10/16 16:30:36 INFO LogicalPlanStats: Setting LogicalPlanStats visitor to com.databricks.sql.optimizer.statsEstimation.DatabricksLogicalPlanStatsVisitor$
+19/10/16 16:30:36 INFO HiveUtils: Initializing HiveMetastoreConnection version 2.3.0 using maven.
+19/10/16 16:30:36 INFO IsolatedClientLoader: Initiating download of metastore jars from maven. This may take a while and is not recommended for production use. Please follow the instructions here: https://docs.databricks.com/user-guide/advanced/external-hive-metastore.html#spark-options on how to download the jars just once and use them in your cluster configuration. A log message beginning with 'Downloaded metastore jars' will print once the download is complete.
+19/10/16 16:31:29 INFO IsolatedClientLoader: Downloaded metastore jars to /local_disk0/tmp/hive-v2_3-f15d0f60-a3b7-4c16-826e-88a3ddc7d654
+19/10/16 16:31:29 INFO HiveConf: Found configuration file null
+19/10/16 16:31:30 INFO SessionState: Created HDFS directory: /tmp/hive/root/d02e4d37-5fc9-4a59-ac79-a4f2a6d98cb9
+19/10/16 16:31:30 INFO SessionState: Created local directory: /local_disk0/tmp/root/d02e4d37-5fc9-4a59-ac79-a4f2a6d98cb9
+19/10/16 16:31:30 INFO SessionState: Created HDFS directory: /tmp/hive/root/d02e4d37-5fc9-4a59-ac79-a4f2a6d98cb9/_tmp_space.db
+19/10/16 16:31:30 INFO HiveClientImpl: Warehouse location for Hive client (version 2.3.3) is adl://connectedsystemsuatdl.azuredatalakestore.net/user/hive/warehouse
+19/10/16 16:31:31 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+19/10/16 16:31:31 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+19/10/16 16:31:31 INFO HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore
+19/10/16 16:31:31 INFO ObjectStore: ObjectStore, initialize called
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.datanucleus.connectionPool.maxIdle unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.datanucleus.connectionPool.maxPoolSize unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property datanucleus.fixedDatastore unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.datanucleus.connectionPool.minPoolSize unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionDriverName unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionURL unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionUserName unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property spark.hadoop.javax.jdo.option.ConnectionPassword unknown - will be ignored
+19/10/16 16:31:31 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+19/10/16 16:31:31 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+19/10/16 16:31:32 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is POSTGRES
+19/10/16 16:31:32 INFO ObjectStore: Initialized ObjectStore
+19/10/16 16:31:32 INFO HiveMetaStore: Added admin role in metastore
+19/10/16 16:31:32 INFO HiveMetaStore: Added public role in metastore
+19/10/16 16:31:33 INFO HiveMetaStore: No user is added in admin role, since config is empty
+19/10/16 16:31:33 INFO HiveMetaStore: 0: get_all_functions
+19/10/16 16:31:33 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_all_functions	
+19/10/16 16:31:33 INFO Hive: Registering function collect brickhouse.udf.collect.CollectUDAF
+19/10/16 16:31:33 INFO Hive: Registering function collect brickhouse.udf.collect.CollectUDAF
+19/10/16 16:31:33 INFO HiveMetaStore: 0: get_database: default
+19/10/16 16:31:33 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_database: default	
+19/10/16 16:31:33 INFO SQLStdHiveAccessController: Created SQLStdHiveAccessController for session context : HiveAuthzSessionContext [sessionString=d02e4d37-5fc9-4a59-ac79-a4f2a6d98cb9, clientType=HIVECLI]
+19/10/16 16:31:33 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+19/10/16 16:31:33 INFO metastore: Mestastore configuration hive.metastore.filter.hook changed from org.apache.hadoop.hive.metastore.DefaultMetaStoreFilterHookImpl to org.apache.hadoop.hive.ql.security.authorization.plugin.AuthorizationMetaStoreFilterHook
+19/10/16 16:31:33 INFO HiveMetaStore: 0: Cleaning up thread local RawStore...
+19/10/16 16:31:33 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=Cleaning up thread local RawStore...	
+19/10/16 16:31:33 INFO HiveMetaStore: 0: Done cleaning up thread local RawStore
+19/10/16 16:31:33 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=Done cleaning up thread local RawStore	
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO SessionState: Added [/local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar] to class path
+19/10/16 16:31:33 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar]
+19/10/16 16:31:33 WARN SparkContext: The jar /local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:33 INFO ScalaDriverWrapper: setupRepl:ReplId-2e600-f86db-71bcc-c: finished to load
+19/10/16 16:31:33 WARN ScalaDriverLocal: User entity information is incomplete, missing userId,orgId,user.
+19/10/16 16:31:33 INFO ProgressReporter$: Added result fetcher for 3341687995390606540_7575602824216384756_c735cf39-f9ca-4255-a430-a3b9f77c88f6
+19/10/16 16:31:33 INFO SignalUtils: Registered signal handler for INT
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 0 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 1 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 2 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 3 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 4 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 5 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 6 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO SQLAppStatusListener: Execution ID: 7 Total Executor Run Time: 0
+19/10/16 16:31:34 INFO DriverILoop: Set class prefix to: linef356b345bf8d40faa01eab9858264412
+19/10/16 16:31:34 INFO DriverILoop: set ContextClassLoader
+19/10/16 16:31:34 INFO DriverILoop: initialized intp
+19/10/16 16:31:38 INFO ProgressReporter$: Removed result fetcher for 3341687995390606540_7575602824216384756_c735cf39-f9ca-4255-a430-a3b9f77c88f6
+19/10/16 16:31:45 INFO DriverCorral: Starting repl ReplId-7e1d3-0945e-fc6aa-5
+19/10/16 16:31:45 INFO LogicalPlanStats: Setting LogicalPlanStats visitor to com.databricks.sql.optimizer.statsEstimation.DatabricksLogicalPlanStatsVisitor$
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile7217789043613435023xml_apis_xml_apis_1_0_b2-167e6.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 8 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile4411382647174118674org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 9 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile1185196731433489562dbfs__FileStore_saak9001_transengine_1_0_SNAPSHOT-ab9b9.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 10 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile190440742281628191org_rogach_scallop_2_11_3_3_1-ecc25.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 11 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile5571444055820508269dbfs__FileStore_saak9001_pqm_core_models_1_0-b0ccd.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 12 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile854602928773429430com_typesafe_config_1_3_1-e3e42.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 13 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile7730152985630193054io_spray_spray_json_2_11_1_3_5-d5f78.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 14 Total Executor Run Time: 0
+19/10/16 16:31:45 INFO SessionState: Added [/local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar] to class path
+19/10/16 16:31:45 INFO SessionState: Added resources: [/local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar]
+19/10/16 16:31:45 WARN SparkContext: The jar /local_disk0/tmp/addedFile649860290155031867dom4j_dom4j_1_6_1-3b35e.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/16 16:31:45 INFO ScalaDriverWrapper: setupRepl:ReplId-7e1d3-0945e-fc6aa-5: finished to load
+19/10/16 16:31:45 INFO SQLAppStatusListener: Execution ID: 15 Total Executor Run Time: 0
+19/10/16 16:31:45 WARN ScalaDriverLocal: User entity information is incomplete, missing userId,user.
+19/10/16 16:31:45 INFO ProgressReporter$: Added result fetcher for 9087473036910422693_7244921071991658977_job-67847-run-1-action-72023
+19/10/16 16:31:46 INFO DriverILoop: Set class prefix to: line97a09e8abd9f41828110429721b831ce
+19/10/16 16:31:46 INFO DriverILoop: set ContextClassLoader
+19/10/16 16:31:46 INFO DriverILoop: initialized intp
+19/10/16 16:31:48 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+19/10/16 16:31:48 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+19/10/16 16:31:49 INFO Instructions: Instruction File has been Read Successfully.>>>>>>>>>>>
+19/10/16 16:31:49 INFO HiveMetaStore: 1: get_database: global_temp
+19/10/16 16:31:49 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_database: global_temp	
+19/10/16 16:31:49 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+19/10/16 16:31:49 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+19/10/16 16:31:49 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+19/10/16 16:31:49 INFO HiveMetaStore: 1: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore
+19/10/16 16:31:49 INFO ObjectStore: ObjectStore, initialize called
+19/10/16 16:31:49 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is POSTGRES
+19/10/16 16:31:49 INFO ObjectStore: Initialized ObjectStore
+19/10/16 16:31:49 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+19/10/16 16:31:49 INFO HiveMetaStore: 1: get_table : db=abd_1000255.bd_output_1000255 tbl=bd_output_1000255
+19/10/16 16:31:49 INFO audit: ugi=root	ip=unknown-ip-addr	cmd=get_table : db=abd_1000255.bd_output_1000255 tbl=bd_output_1000255	
+19/10/16 16:31:49 ERROR ScalaDriverLocal: User Code Stack Trace: 
+java.lang.RuntimeException: Table bd_output_1000255 in abd_1000255.bd_output_1000255 doesnot exist
+	at com.nielsen.te.v3.initialize.InitializeStepExecutor$$anonfun$validatePhysicalTables$1$$anonfun$apply$1.apply(InitializeStepExecutor.scala:14)
+	at com.nielsen.te.v3.initialize.InitializeStepExecutor$$anonfun$validatePhysicalTables$1$$anonfun$apply$1.apply(InitializeStepExecutor.scala:13)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at com.nielsen.te.v3.initialize.InitializeStepExecutor$$anonfun$validatePhysicalTables$1.apply(InitializeStepExecutor.scala:13)
+	at com.nielsen.te.v3.initialize.InitializeStepExecutor$$anonfun$validatePhysicalTables$1.apply(InitializeStepExecutor.scala:12)
+	at scala.collection.immutable.List.foreach(List.scala:381)
+	at com.nielsen.te.v3.initialize.InitializeStepExecutor.validatePhysicalTables(InitializeStepExecutor.scala:12)
+	at com.nielsen.te.v3.initialize.InitializeStepExecutor.executeStep(InitializeStepExecutor.scala:41)
+	at com.nielsen.te.v3.executor.LibraryStepExecutor.executeStep(StepExecutor.scala:56)
+	at com.nielsen.te.v3.TEv3Main$.initializeRun(TEv3Main.scala:35)
+	at com.nielsen.te.v3.TEv3Main$.appMain(TEv3Main.scala:46)
+	at com.nielsen.te.v3.TEv3Main$.main(TEv3Main.scala:51)
+	at line97a09e8abd9f41828110429721b831ce25.$read$$iw$$iw$$iw$$iw$$iw$$iw.<init>(command--1:1)
+	at line97a09e8abd9f41828110429721b831ce25.$read$$iw$$iw$$iw$$iw$$iw.<init>(command--1:44)
+	at line97a09e8abd9f41828110429721b831ce25.$read$$iw$$iw$$iw$$iw.<init>(command--1:46)
+	at line97a09e8abd9f41828110429721b831ce25.$read$$iw$$iw$$iw.<init>(command--1:48)
+	at line97a09e8abd9f41828110429721b831ce25.$read$$iw$$iw.<init>(command--1:50)
+	at line97a09e8abd9f41828110429721b831ce25.$read$$iw.<init>(command--1:52)
+	at line97a09e8abd9f41828110429721b831ce25.$read.<init>(command--1:54)
+	at line97a09e8abd9f41828110429721b831ce25.$read$.<init>(command--1:58)
+	at line97a09e8abd9f41828110429721b831ce25.$read$.<clinit>(command--1)
+	at line97a09e8abd9f41828110429721b831ce25.$eval$.$print$lzycompute(<notebook>:7)
+	at line97a09e8abd9f41828110429721b831ce25.$eval$.$print(<notebook>:6)
+	at line97a09e8abd9f41828110429721b831ce25.$eval.$print(<notebook>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:786)
+	at scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1047)
+	at scala.tools.nsc.interpreter.IMain$WrappedRequest$$anonfun$loadAndRunReq$1.apply(IMain.scala:638)
+	at scala.tools.nsc.interpreter.IMain$WrappedRequest$$anonfun$loadAndRunReq$1.apply(IMain.scala:637)
+	at scala.reflect.internal.util.ScalaClassLoader$class.asContext(ScalaClassLoader.scala:31)
+	at scala.reflect.internal.util.AbstractFileClassLoader.asContext(AbstractFileClassLoader.scala:19)
+	at scala.tools.nsc.interpreter.IMain$WrappedRequest.loadAndRunReq(IMain.scala:637)
+	at scala.tools.nsc.interpreter.IMain.interpret(IMain.scala:569)
+	at scala.tools.nsc.interpreter.IMain.interpret(IMain.scala:565)
+	at com.databricks.backend.daemon.driver.DriverILoop.execute(DriverILoop.scala:199)
+	at com.databricks.backend.daemon.driver.ScalaDriverLocal$$anonfun$repl$1.apply$mcV$sp(ScalaDriverLocal.scala:189)
+	at com.databricks.backend.daemon.driver.ScalaDriverLocal$$anonfun$repl$1.apply(ScalaDriverLocal.scala:189)
+	at com.databricks.backend.daemon.driver.ScalaDriverLocal$$anonfun$repl$1.apply(ScalaDriverLocal.scala:189)
+	at com.databricks.backend.daemon.driver.DriverLocal$TrapExitInternal$.trapExit(DriverLocal.scala:587)
+	at com.databricks.backend.daemon.driver.DriverLocal$TrapExit$.apply(DriverLocal.scala:542)
+	at com.databricks.backend.daemon.driver.ScalaDriverLocal.repl(ScalaDriverLocal.scala:189)
+	at com.databricks.backend.daemon.driver.DriverLocal$$anonfun$execute$7.apply(DriverLocal.scala:324)
+	at com.databricks.backend.daemon.driver.DriverLocal$$anonfun$execute$7.apply(DriverLocal.scala:304)
+	at com.databricks.logging.UsageLogging$$anonfun$withAttributionContext$1.apply(UsageLogging.scala:235)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at com.databricks.logging.UsageLogging$class.withAttributionContext(UsageLogging.scala:230)
+	at com.databricks.backend.daemon.driver.DriverLocal.withAttributionContext(DriverLocal.scala:45)
+	at com.databricks.logging.UsageLogging$class.withAttributionTags(UsageLogging.scala:268)
+	at com.databricks.backend.daemon.driver.DriverLocal.withAttributionTags(DriverLocal.scala:45)
+	at com.databricks.backend.daemon.driver.DriverLocal.execute(DriverLocal.scala:304)
+	at com.databricks.backend.daemon.driver.DriverWrapper$$anonfun$tryExecutingCommand$2.apply(DriverWrapper.scala:589)
+	at com.databricks.backend.daemon.driver.DriverWrapper$$anonfun$tryExecutingCommand$2.apply(DriverWrapper.scala:589)
+	at scala.util.Try$.apply(Try.scala:192)
+	at com.databricks.backend.daemon.driver.DriverWrapper.tryExecutingCommand(DriverWrapper.scala:584)
+	at com.databricks.backend.daemon.driver.DriverWrapper.getCommandOutputAndError(DriverWrapper.scala:475)
+	at com.databricks.backend.daemon.driver.DriverWrapper.executeCommand(DriverWrapper.scala:542)
+	at com.databricks.backend.daemon.driver.DriverWrapper.runInnerLoop(DriverWrapper.scala:381)
+	at com.databricks.backend.daemon.driver.DriverWrapper.runInner(DriverWrapper.scala:328)
+	at com.databricks.backend.daemon.driver.DriverWrapper.run(DriverWrapper.scala:215)
+	at java.lang.Thread.run(Thread.java:748)
+19/10/16 16:31:49 INFO ProgressReporter$: Removed result fetcher for 9087473036910422693_7244921071991658977_job-67847-run-1-action-72023
+19/10/16 16:31:52 INFO DriverCorral$: Cleaning the wrapper ReplId-7e1d3-0945e-fc6aa-5 (currently in status Idle(ReplId-7e1d3-0945e-fc6aa-5))
+19/10/16 16:31:52 INFO DriverCorral$: sending shutdown signal for REPL ReplId-7e1d3-0945e-fc6aa-5
+19/10/16 16:31:52 INFO DriverCorral$: sending the interrupt signal for REPL ReplId-7e1d3-0945e-fc6aa-5
+19/10/16 16:31:52 INFO DriverCorral$: waiting for localThread to stop for REPL ReplId-7e1d3-0945e-fc6aa-5
+19/10/16 16:31:52 INFO DriverCorral$: ReplId-7e1d3-0945e-fc6aa-5 successfully discarded
+19/10/16 16:31:53 ERROR TaskSchedulerImpl: Lost executor 0 on 10.139.64.16: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+19/10/16 16:31:53 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20191016162932-0000/0 is now LOST (worker lost)
+19/10/16 16:31:53 INFO DAGScheduler: Executor lost: 0 (epoch 0)
+19/10/16 16:31:53 INFO BlockManagerMasterEndpoint: Trying to remove executor 0 from BlockManagerMaster.
+19/10/16 16:31:53 INFO StandaloneSchedulerBackend: Executor app-20191016162932-0000/0 removed: worker lost
+19/10/16 16:31:53 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(0, 10.139.64.16, 43905, None)
+19/10/16 16:31:53 INFO StandaloneAppClient$ClientEndpoint: Master removed worker worker-20191016162932-10.139.64.16-35703: 10.139.64.16:35703 got disassociated
+19/10/16 16:31:53 INFO BlockManagerMaster: Removed 0 successfully in removeExecutor
+19/10/16 16:31:53 INFO StandaloneSchedulerBackend: Worker worker-20191016162932-10.139.64.16-35703 removed: 10.139.64.16:35703 got disassociated
+19/10/16 16:31:53 INFO BlockManagerMasterEndpoint: Trying to remove executor 0 from BlockManagerMaster.
+19/10/16 16:31:53 INFO BlockManagerMaster: Removal of executor 0 requested
+19/10/16 16:31:53 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Asked to remove non-existent executor 0
+19/10/16 16:31:53 INFO TaskSchedulerImpl: Handle removed worker worker-20191016162932-10.139.64.16-35703: 10.139.64.16:35703 got disassociated
+19/10/16 16:31:53 INFO DAGScheduler: Shuffle files lost for worker worker-20191016162932-10.139.64.16-35703 on host 10.139.64.16

@@ -31,7 +31,7 @@
           "tableName": "bd_output_1000255",
           "tableSourceDataId": "factory",
           "appendReplace": "replace",
-          "tableQuery": "select * from abd_1000255.bd_output_1000255",
+          "tableQuery": "select * from bd_output_1000255",
           "tableValidationError": "PREVIOUS|REJECT",
           "columns": [
             {
