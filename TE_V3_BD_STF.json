@@ -27,31 +27,7 @@
     },
     "physical": {
       "tables": [
-        {
-          "tableName": "bd_output_1000255",
-          "tableSourceDataId": "factory",
-          "appendReplace": "replace",
-          "tableQuery": "select * from bd_output_1000255",
-          "tableValidationError": "PREVIOUS|REJECT",
-          "columns": [
-            {
-              "columnName": "agd_mah_id",
-              "columnHeader": "agd_mah_id",
-              "columnDataType": "bigint",
-              "columnSize": 20,
-              "columnPrecision": 19,
-              "columnIsKey": "N"
-            },
-            {
-              "columnName": "agd_tpr_id",
-              "columnHeader": "agd_tpr_id",
-              "columnDataType": "bigint",
-              "columnSize": 20,
-              "columnPrecision": 19,
-              "columnIsKey": "N"
-            }
-          ]
-        }
+        
       ]
     },
     "logical": {
