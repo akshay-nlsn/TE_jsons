@@ -27,7 +27,7 @@
     },
     "physical": {
       "tables": [
-        
+
       ]
     },
     "logical": {
@@ -103,43 +103,72 @@
               "StepTarget": "String"
             }
           ]
-        },
-        {
-              "dimensionName": "Product",
-              "dimensionTemplate": "ProductBuildQuery",
-              "configuration": {
-                "Mode": "Overwrite",
-                "config": "coalesce/repartition",
-                "Partition": [
+        }
+      ],
+      "facts":[
+         {
+            "factName":"BDFacts",
+            "factTemplate":"RMS BD Facts",
+            "configuration":{
+               "Mode":"Overwrite/Append",
+               "config":"coalesce/repartition",
+               "Partition":[
                   ""
-                ],
-                "Location": "file",
-                "RunParellel": "No"
-              },
-              "steps": [
-                {
-                  "StepID": "1",
-                  "StepName": "ProductCSV",
-                  "StepDescription": "Product CSV Build",
-                  "StepDependency": [
-                    ""
+               ],
+               "Location":"ADLS",
+               "RunParellel":"Yes/No"
+            },
+            "extract":[
+               {
+                  "Source":"bd_output_1000255"
+               }
+            ],
+            "steps":[
+               {
+                  "StepID":"1",
+                  "StepName":"bd_output_1000255_table",
+                  "StepDescription":"fact_aggregation",
+                  "StepDependency":[
+                     ""
                   ],
-                  "StepOutputFormat": "Parquet",
-                  "StepDefinition": "reads csv and builds Product file",
-                  "StepQuery": "aaa",
-                  "StepTranformationType": "library",
-                  "StepSourceType": "String",
-                  "StepFileLocation": "String",
-                  "StepOutputType": "Table",
-                  "StepOutputName": "PRDC_DIM",
-                  "StepLibraryDetails": {
-                    "jarLocation": "abc.jar",
-                    "className": "com.nielsen.te.v3.core.executors.ProductExecutor"
+                  "StepOutputFormat":"Parquet",
+                  "StepDefinition":"CREATE TEMPORARY TABLE",
+                  "StepQuery":"select  * from bd_output_1000255",
+                  "StepTranformationType":"sql",
+                  "StepSourceType":"N/A",
+                  "StepFileLocation":"N/A",
+                  "StepOutputType":"N/A",
+                  "StepOutputName":"bd_output_1000255_table",
+                  "StepLibraryDetails":{
+                     "jarLocation":"N/A",
+                     "className":null
                   },
-                  "StepTarget": "String"
-                }
-              ]
-            }
+                  "StepTarget":null,
+                  "StepMapping":null
+               },
+               {
+                  "StepID":"2",
+                  "StepName":"bd_output_1000255",
+                  "StepDescription":"FACT",
+                  "StepDependency":[
+                     ""
+                  ],
+                  "StepOutputFormat":"Parquet",
+                  "StepDefinition":"CREATE TEMPORARY TABLE",
+                  "StepQuery":"aaa",
+                  "StepTranformationType":"library",
+                  "StepSourceType":"String",
+                  "StepFileLocation":"String",
+                  "StepOutputType":"String",
+                  "StepOutputName":"bd_output_1000255",
+                  "StepLibraryDetails":{
+                     "jarLocation":"abc.jar",
+                     "className":"com.nielsen.te.v3.core.executors.FactExecutor"
+                  },
+                  "StepTarget":"String"
+               }
+            ]
+         }
       ]
     }
   }
