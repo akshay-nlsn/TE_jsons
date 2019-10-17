@@ -120,7 +120,7 @@
             },
             "extract":[
                {
-                  "Source":"bd_output_1000255"
+                  "Source":"abd_1000255.bd_output_1000255"
                }
             ],
             "steps":[
@@ -132,8 +132,8 @@
                      ""
                   ],
                   "StepOutputFormat":"Parquet",
-                  "StepDefinition":"CREATE TEMPORARY TABLE",
-                  "StepQuery":"select  * from bd_output_1000255",
+                  "StepDefinition":"CREATE TABLE",
+                  "StepQuery":"select * from abd_1000255.bd_output_1000255",
                   "StepTranformationType":"sql",
                   "StepSourceType":"N/A",
                   "StepFileLocation":"N/A",
@@ -143,29 +143,8 @@
                      "jarLocation":"N/A",
                      "className":null
                   },
-                  "StepTarget":null,
+                  "StepTarget":"FINAL",
                   "StepMapping":null
-               },
-               {
-                  "StepID":"2",
-                  "StepName":"bd_output_1000255",
-                  "StepDescription":"FACT",
-                  "StepDependency":[
-                     ""
-                  ],
-                  "StepOutputFormat":"Parquet",
-                  "StepDefinition":"CREATE TEMPORARY TABLE",
-                  "StepQuery":"aaa",
-                  "StepTranformationType":"library",
-                  "StepSourceType":"String",
-                  "StepFileLocation":"String",
-                  "StepOutputType":"String",
-                  "StepOutputName":"bd_output_1000255",
-                  "StepLibraryDetails":{
-                     "jarLocation":"abc.jar",
-                     "className":"com.nielsen.te.v3.core.executors.FactExecutor"
-                  },
-                  "StepTarget":"String"
                }
             ]
          }
