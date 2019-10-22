@@ -1,0 +1,190 @@
+{
+  "frameDefinition": {
+    "DBEngine": {
+      "Snowflake": {
+        "SnowflakeConfig": {
+          "sfOption": [
+            ""
+          ]
+        }
+      },
+      "SparkSQL": {
+        "SparkConfig": {
+          "sparkProps": [
+            ""
+          ]
+        }
+      }
+    },
+    "QueryEngine": {
+      "QE_type": "Spark-SQL/Snowflake"
+    },
+    "DBEngineConfig": {
+      "Cost_Estimate": ":Low/Avg/high/very-high",
+      "No_of_executer": "10",
+      "Memory_per_executer": "10",
+      "Core_per_executer": "5"
+    },
+    "physical": {
+      "tables": [
+
+      ]
+    },
+    "logical": {
+      "dimensions": [
+        {
+          "dimensionName": "Market",
+          "dimensionTemplate": "MarketBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "MarketCSV",
+              "StepDescription": "Market CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds market file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "MRKT_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+	      {
+          "dimensionName": "Period",
+          "dimensionTemplate": "PeriodBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "PeriodCSV",
+              "StepDescription": "Period CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Period file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRD_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        },
+        {
+          "dimensionName": "Product",
+          "dimensionTemplate": "ProductBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "ProductCSV",
+              "StepDescription": "Product CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Product file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRDC_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.ProductExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
+        }
+      ],
+      "facts":[
+         {
+            "factName":"BDFacts",
+            "factTemplate":"RMS BD Facts",
+            "configuration":{
+               "Mode":"Overwrite/Append",
+               "config":"coalesce/repartition",
+               "Partition":[
+                  ""
+               ],
+               "Location":"ADLS",
+               "RunParellel":"Yes/No"
+            },
+            "extract":[
+               {
+                  "Source":"abd_1000255.bd_output_1000255"
+               }
+            ],
+            "steps":[
+               {
+                  "StepID":"1",
+                  "StepName":"fct_dim",
+                  "StepDescription":"fact_aggregation",
+                  "StepDependency":[
+                     ""
+                  ],
+                  "StepOutputFormat":"Parquet",
+                  "StepDefinition":"CREATE TABLE",
+                  "StepQuery":"select * from abd_1000255.bd_output_1000255",
+                  "StepTranformationType":"sql",
+                  "StepSourceType":"N/A",
+                  "StepFileLocation":"N/A",
+                  "StepOutputType":"N/A",
+                  "StepOutputName":"FCT_DIM",
+                  "StepLibraryDetails":{
+                     "jarLocation":"N/A",
+                     "className":null
+                  },
+                  "StepTarget":"FINAL",
+                  "StepMapping":null
+               }
+            ]
+         }
+      ]
+    }
+  }
+}
