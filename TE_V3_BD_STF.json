@@ -68,7 +68,7 @@
             }
           ]
         },
-		{
+	      {
           "dimensionName": "Period",
           "dimensionTemplate": "PeriodBuildQuery",
           "configuration": {
@@ -103,6 +103,42 @@
               "StepTarget": "String"
             }
           ]
+        },
+        {
+          "dimensionName": "Product",
+          "dimensionTemplate": "ProductBuildQuery",
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "ProductCSV",
+              "StepDescription": "Product CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Product file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRDC_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.ProductExecutor"
+              },
+              "StepTarget": "String"
+            }
+          ]
         }
       ],
       "facts":[
@@ -126,7 +162,7 @@
             "steps":[
                {
                   "StepID":"1",
-                  "StepName":"bd_output_1000255_table",
+                  "StepName":"fct_dim",
                   "StepDescription":"fact_aggregation",
                   "StepDependency":[
                      ""
@@ -138,7 +174,7 @@
                   "StepSourceType":"N/A",
                   "StepFileLocation":"N/A",
                   "StepOutputType":"N/A",
-                  "StepOutputName":"bd_output_1000255_table",
+                  "StepOutputName":"FCT_DIM",
                   "StepLibraryDetails":{
                      "jarLocation":"N/A",
                      "className":null

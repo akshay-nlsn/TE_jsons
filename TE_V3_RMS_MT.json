@@ -1,0 +1,363 @@
+{
+  "frameDefinition": {
+    "QueryEngine": {
+      "QE_type": "Snowflake"
+    },
+    "QueryEngineContext": {
+      "QueryCost": ":Low/Avg/high/very-high",
+      "TotalExecuter": "10",
+      "ExecuterMemory": "10G",
+      "ExecuterCore": "5",
+      "DriverMemory": "5G",
+      "ApplicationNames": "CSTE_QueryEngine",
+      "SparkMaster": "local[4]",
+      "SparkYarnDeployMode": "",
+      "SparkHome": "",
+      "sparkContextType": "SparkContext/SQLContext/HiveContext",
+      "YarnQueue": "",
+      "MainClass": "",
+      "MainArguments": ""
+    },
+    "QueryEngineConfig": {
+      "Snowflake": {
+        "SnowflakeConfig": {
+          "sfOption": [
+            ""
+          ]
+        }
+      },
+      "SparkSQL": {
+        "SparkConfig": {
+          "sparkProps": [
+            ""
+          ]
+        }
+      }
+    },
+    "physical": {
+      "tables": [
+        {
+          "tableName": "trag_aggregated_data",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000575.trag_universe_data",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "agd_mah_id",
+              "columnHeader": "agd_mah_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "agd_tpr_id",
+              "columnHeader": "agd_tpr_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        },
+        {
+          "tableName": "trag_universe_data",
+          "tableSourceDataId": "factory",
+          "appendReplace": "replace",
+          "tableQuery": "select * from fg_snspazuna_1000575.trag_universe_data",
+          "tableValidationError": "PREVIOUS|REJECT",
+          "columns": [
+            {
+              "columnName": "agd_mah_id",
+              "columnHeader": "agd_mah_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            },
+            {
+              "columnName": "agd_tpr_id",
+              "columnHeader": "agd_tpr_id",
+              "columnDataType": "bigint",
+              "columnSize": 20,
+              "columnPrecision": 19,
+              "columnIsKey": "N"
+            }
+          ]
+        }
+      ]
+    },
+    "logical": {
+      "preProcess": [
+        {
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "Initialize",
+              "StepDescription": "initialization step",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "None",
+              "StepDefinition": "Validate and initialize PQM",
+              "StepTranformationType": "library",
+              "StepSourceType": "N/A",
+              "StepFileLocation": "N/A",
+              "StepOutputType": "N/A",
+              "StepOutputName": "N/A",
+              "StepLibraryDetails": {
+                "jarLocation": "N/A",
+                "className": "com.nielsen.te.v3.initialize.InitializeStepExecutor"
+              },
+              "StepTarget": null,
+              "StepMapping": null
+            }
+          ]
+        }
+      ],
+      "dimensions": [
+        {
+          "dimensionName": "Market",
+          "dimensionTemplate": "MRKT",
+          "executeProcess": {
+            "ProcessType": "JVM/Python/Shell",
+            "Mandatory": "No",
+            "HostName": "192.168.96.129",
+            "PortDetails": "22",
+            "Username": "ubuntu",
+            "Password": "ubuntu",
+            "Public_Key": "N/A",
+            "CommandDelimiter": "\\;",
+            "CommandToExecute": "cd /dev/nielsen/platform/job/tPivotCharVal",
+            "ExecuteScript": "./tPivotCharVal_run.sh"
+          },
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "MarketCSV",
+              "StepDescription": "Market CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds market file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "MRKT_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "FINAL",
+              "StepMapping": null
+            }
+          ]
+        },
+        {
+          "dimensionName": "Period",
+          "dimensionTemplate": "PRD",
+          "executeProcess": {
+            "ProcessType": "JVM/Python/Shell",
+            "Mandatory": "No",
+            "HostName": "192.168.96.129",
+            "PortDetails": "22",
+            "Username": "ubuntu",
+            "Password": "ubuntu",
+            "Public_Key": "N/A",
+            "CommandDelimiter": "\\;",
+            "CommandToExecute": "cd /dev/nielsen/platform/job/tPivotCharVal",
+            "ExecuteScript": "./tPivotCharVal_run.sh"
+          },
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "PeriodCSV",
+              "StepDescription": "Period CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Period file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRD_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "FINAL",
+              "StepMapping": null
+            },
+            {
+              "StepID": "2",
+              "StepName": "PeriodPrevCSV",
+              "StepDescription": "PeriodPrev CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Period Prev file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRD_DIM_PREV",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.FileToDimension"
+              },
+              "StepTarget": "FINAL",
+              "StepMapping": null
+            }
+          ]
+        },
+        {
+          "dimensionName": "Product",
+          "dimensionTemplate": "PRDC",
+          "executeProcess": {
+            "ProcessType": "JVM/Python/Shell",
+            "Mandatory": "No",
+            "HostName": "192.168.96.129",
+            "PortDetails": "22",
+            "Username": "ubuntu",
+            "Password": "ubuntu",
+            "Public_Key": "N/A",
+            "CommandDelimiter": "\\;",
+            "CommandToExecute": "cd /dev/nielsen/platform/job/tPivotCharVal",
+            "ExecuteScript": "./tPivotCharVal_run.sh"
+          },
+          "configuration": {
+            "Mode": "Overwrite",
+            "config": "coalesce/repartition",
+            "Partition": [
+              ""
+            ],
+            "Location": "file",
+            "RunParellel": "No"
+          },
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "ProductCSV",
+              "StepDescription": "Product CSV Build",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "Parquet",
+              "StepDefinition": "reads csv and builds Product file",
+              "StepQuery": "aaa",
+              "StepTranformationType": "library",
+              "StepSourceType": "String",
+              "StepFileLocation": "String",
+              "StepOutputType": "Table",
+              "StepOutputName": "PRDC_DIM",
+              "StepLibraryDetails": {
+                "jarLocation": "abc.jar",
+                "className": "com.nielsen.te.v3.core.executors.ProductExecutor"
+              },
+              "StepTarget": "FINAL",
+              "StepMapping": null
+            }
+          ]
+        }
+      ],
+      "facts":[
+         {
+            "factName":"BDFacts",
+            "factTemplate":"RMS BD Facts",
+            "configuration":{
+               "Mode":"Overwrite/Append",
+               "config":"coalesce/repartition",
+               "Partition":[
+                  ""
+               ],
+               "Location":"ADLS",
+               "RunParellel":"Yes/No"
+            },
+            "extract":[
+               {
+                  "Source":"abd_1000255.bd_output_1000255"
+               }
+            ],
+            "steps":[
+               {
+                  "StepID":"1",
+                  "StepName":"fct_dim",
+                  "StepDescription":"fact_aggregation",
+                  "StepDependency":[
+                     ""
+                  ],
+                  "StepOutputFormat":"Parquet",
+                  "StepDefinition":"CREATE TABLE",
+                  "StepQuery":"select * from abd_1000255.bd_output_1000255",
+                  "StepTranformationType":"sql",
+                  "StepSourceType":"N/A",
+                  "StepFileLocation":"N/A",
+                  "StepOutputType":"N/A",
+                  "StepOutputName":"FCT_DIM",
+                  "StepLibraryDetails":{
+                     "jarLocation":"N/A",
+                     "className":null
+                  },
+                  "StepTarget":"FINAL",
+                  "StepMapping":null
+               }
+            ]
+         }
+      ],
+      "postProcess": [
+        {
+          "steps": [
+            {
+              "StepID": "1",
+              "StepName": "validate",
+              "StepDescription": "validation step",
+              "StepDependency": [
+                ""
+              ],
+              "StepOutputFormat": "None",
+              "StepDefinition": "Validate and initialize PQM",
+              "StepTranformationType": "library",
+              "StepSourceType": "N/A",
+              "StepFileLocation": "N/A",
+              "StepOutputType": "N/A",
+              "StepOutputName": "N/A",
+              "StepLibraryDetails": {
+                "jarLocation": "N/A",
+                "className": "com.nielsen.te.v3.executor.DummyStep"
+              },
+              "StepTarget": null,
+              "StepMapping": null
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

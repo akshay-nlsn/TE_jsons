@@ -16,9 +16,11 @@
   "solutionType": "RMS",
   "sourceDBNames":{
      "fg_name":[
-        "abd_1000255"
+        "fg_snspazuna_1000233"
      ],
-     "mt_name":[]
+     "mt_name":[
+       "abd_1000255"
+     ]
   },
   "physicalReportableDBName": "bd_output_1000255",
   "excludeFacts": [
