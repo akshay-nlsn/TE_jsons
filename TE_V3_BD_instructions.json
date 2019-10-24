@@ -13,13 +13,13 @@
   },
   "countryCode": "US",
   "dataviewType": "PRE_AGG",
-  "solutionType": "RMS",
+  "solutionType": "RMS+BD",
   "sourceDBNames":{
      "fg_name":[
         "fg_snspazuna_1000233"
      ],
-     "mt_name":[
-       "abd_1000255"
+     "bd_name":[
+       "abd_1000255.bd_output_1000255"
      ]
   },
   "physicalReportableDBName": "bd_output_1000255",

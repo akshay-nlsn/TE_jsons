@@ -154,11 +154,6 @@
                "Location":"ADLS",
                "RunParellel":"Yes/No"
             },
-            "extract":[
-               {
-                  "Source":"abd_1000255.bd_output_1000255"
-               }
-            ],
             "steps":[
                {
                   "StepID":"1",
@@ -169,7 +164,7 @@
                   ],
                   "StepOutputFormat":"Parquet",
                   "StepDefinition":"CREATE TABLE",
-                  "StepQuery":"select * from abd_1000255.bd_output_1000255",
+                  "StepQuery":"select *",
                   "StepTranformationType":"sql",
                   "StepSourceType":"N/A",
                   "StepFileLocation":"N/A",
