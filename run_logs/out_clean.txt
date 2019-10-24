@@ -1,9 +1,9 @@
-19/10/24 18:13:06 WARN RunHelpers$: Missing tag isolation client: java.util.NoSuchElementException: key not found: TagDefinition(clientType,The client type for a request, used for isolating resources for the request.)
-19/10/24 18:13:06 WARN MetastoreMonitor$: Uri scheme postgresql is not supported.
-19/10/24 18:13:06 WARN MetastoreMonitor$: Unexpected partial metastore configuration (userOpt=Some(tedbuat), pw.isDefined=true, uriOpt=None)
-19/10/24 18:13:07 WARN SparkConf: The configuration key 'spark.scheduler.listenerbus.eventqueue.size' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.scheduler.listenerbus.eventqueue.capacity' instead.
-19/10/24 18:13:07 WARN SparkConf: The configuration key 'spark.akka.frameSize' has been deprecated as of Spark 1.6 and may be removed in the future. Please use the new key 'spark.rpc.message.maxSize' instead.
-19/10/24 18:13:08 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction, spark.shuffle.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+19/10/24 19:09:49 WARN RunHelpers$: Missing tag isolation client: java.util.NoSuchElementException: key not found: TagDefinition(clientType,The client type for a request, used for isolating resources for the request.)
+19/10/24 19:09:49 WARN MetastoreMonitor$: Uri scheme postgresql is not supported.
+19/10/24 19:09:49 WARN MetastoreMonitor$: Unexpected partial metastore configuration (userOpt=Some(tedbuat), pw.isDefined=true, uriOpt=None)
+19/10/24 19:09:50 WARN SparkConf: The configuration key 'spark.scheduler.listenerbus.eventqueue.size' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.scheduler.listenerbus.eventqueue.capacity' instead.
+19/10/24 19:09:50 WARN SparkConf: The configuration key 'spark.akka.frameSize' has been deprecated as of Spark 1.6 and may be removed in the future. Please use the new key 'spark.rpc.message.maxSize' instead.
+19/10/24 19:09:50 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction, spark.shuffle.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
 datanucleus.autoCreateSchema=true
 datanucleus.fixedDatastore=false
 eventLog.rolloverIntervalSeconds=3600
@@ -19,16 +19,16 @@ spark.databricks.cloudProvider=Azure
 spark.databricks.clusterSource=JOB
 spark.databricks.clusterUsageTags.autoTerminationMinutes=0
 spark.databricks.clusterUsageTags.clusterAggressiveAutoscalingWindowDownSeconds=300
-spark.databricks.clusterUsageTags.clusterAllTags=[{"key":"Vendor","value":"Databricks"},{"key":"Creator","value":"basheer.ahamed@nielsen.com"},{"key":"ClusterName","value":"job-69266-run-1"},{"key":"ClusterId","value":"1024-180353-fades264"},{"key":"DatabricksEnvironment","value":"workerenv-5614106561397268"}]
+spark.databricks.clusterUsageTags.clusterAllTags=[{"key":"Vendor","value":"Databricks"},{"key":"Creator","value":"basheer.ahamed@nielsen.com"},{"key":"ClusterName","value":"job-69282-run-1"},{"key":"ClusterId","value":"1024-190552-bug64"},{"key":"DatabricksEnvironment","value":"workerenv-5614106561397268"}]
 spark.databricks.clusterUsageTags.clusterCreator=JobLauncher
 spark.databricks.clusterUsageTags.clusterGeneration=0
-spark.databricks.clusterUsageTags.clusterId=1024-180353-fades264
+spark.databricks.clusterUsageTags.clusterId=1024-190552-bug64
 spark.databricks.clusterUsageTags.clusterLogDeliveryEnabled=true
 spark.databricks.clusterUsageTags.clusterLogDestination=dbfs:/mnt/te_mount/uat_logs/
 spark.databricks.clusterUsageTags.clusterMaxWorkers=5
 spark.databricks.clusterUsageTags.clusterMetastoreAccessType=RDS_DIRECT
 spark.databricks.clusterUsageTags.clusterMinWorkers=1
-spark.databricks.clusterUsageTags.clusterName=job-69266-run-1
+spark.databricks.clusterUsageTags.clusterName=job-69282-run-1
 spark.databricks.clusterUsageTags.clusterNoDriverDaemon=false
 spark.databricks.clusterUsageTags.clusterNodeType=Standard_E16s_v3
 spark.databricks.clusterUsageTags.clusterNumSshKeys=0
@@ -44,12 +44,12 @@ spark.databricks.clusterUsageTags.clusterStateMessage=Starting Spark
 spark.databricks.clusterUsageTags.clusterTargetWorkers=1
 spark.databricks.clusterUsageTags.clusterWorkers=1
 spark.databricks.clusterUsageTags.containerType=LXC
-spark.databricks.clusterUsageTags.driverContainerId=0e5eac2eb12346188299f2ea2c7ddd5a
-spark.databricks.clusterUsageTags.driverContainerPrivateIp=10.139.64.48
-spark.databricks.clusterUsageTags.driverInstanceId=c9e9100b9b394492b2bc44d960047dde
-spark.databricks.clusterUsageTags.driverInstancePrivateIp=10.139.0.60
+spark.databricks.clusterUsageTags.driverContainerId=3bc88bab362e46c6953caaeb4a9111b6
+spark.databricks.clusterUsageTags.driverContainerPrivateIp=10.139.64.54
+spark.databricks.clusterUsageTags.driverInstanceId=3ea7b390144c4e849057751b2ce93bdf
+spark.databricks.clusterUsageTags.driverInstancePrivateIp=10.139.0.51
 spark.databricks.clusterUsageTags.driverNodeType=Standard_E16s_v3
-spark.databricks.clusterUsageTags.driverPublicDns=52.232.184.128
+spark.databricks.clusterUsageTags.driverPublicDns=52.242.120.107
 spark.databricks.clusterUsageTags.enableCredentialPassthrough=*********(redacted)
 spark.databricks.clusterUsageTags.enableDfAcls=false
 spark.databricks.clusterUsageTags.enableElasticDisk=true
@@ -79,7 +79,7 @@ spark.databricks.preemption.enabled=true
 spark.databricks.r.cleanWorkspace=true
 spark.databricks.redactor=com.databricks.spark.util.DatabricksSparkLogRedactorProxy
 spark.databricks.session.share=false
-spark.databricks.sparkContextId=8310231648178615226
+spark.databricks.sparkContextId=361115084784712458
 spark.databricks.sql.hive.msck.batchSize=200
 spark.databricks.sql.hive.msck.parallelism=20
 spark.databricks.tahoe.logStore.aws.class=com.databricks.tahoe.store.MultiClusterLogStore
@@ -148,12 +148,12 @@ spark.hadoop.spark.sql.sources.outputCommitterClass=com.databricks.backend.daemo
 spark.hadoop.spark.thriftserver.customHeadersToProperties=*********(redacted)
 spark.home=/databricks/spark
 spark.logConf=true
-spark.master=spark://10.139.64.48:7077
+spark.master=spark://10.139.64.54:7077
 spark.metrics.conf=/databricks/spark/conf/metrics.properties
 spark.r.backendConnectionTimeout=604800
 spark.r.numRBackendThreads=1
 spark.rdd.compress=true
-spark.repl.class.outputDir=/local_disk0/tmp/repl/spark-8310231648178615226-63e54966-a250-4e07-87d1-99caabd0b9cc
+spark.repl.class.outputDir=/local_disk0/tmp/repl/spark-361115084784712458-0412fe4f-bce1-4d7f-84fe-99a3df2873e5
 spark.scheduler.listenerbus.eventqueue.size=20000
 spark.scheduler.mode=FAIR
 spark.serializer.objectStreamReset=100
@@ -187,66 +187,65 @@ spark.streaming.driver.writeAheadLog.closeFileAfterWrite=true
 spark.task.maxFailures=10
 spark.task.reaper.enabled=true
 spark.task.reaper.killTimeout=60s
-spark.ui.port=46130
+spark.ui.port=46614
 spark.worker.cleanup.enabled=false
-19/10/24 18:13:08 WARN MetricsSystem: Using default name SparkStatusTracker for source because neither spark.metrics.namespace nor spark.app.id is set.
-19/10/24 18:13:09 WARN FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
-19/10/24 18:13:17 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
-19/10/24 18:13:17 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
-19/10/24 18:13:18 WARN EC2MetadataUtils: Unable to retrieve the requested metadata.
-19/10/24 18:13:19 WARN SparkConf: The configuration key 'spark.scheduler.listenerbus.eventqueue.size' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.scheduler.listenerbus.eventqueue.capacity' instead.
-19/10/24 18:13:19 WARN SparkConf: The configuration key 'spark.akka.frameSize' has been deprecated as of Spark 1.6 and may be removed in the future. Please use the new key 'spark.rpc.message.maxSize' instead.
-19/10/24 18:13:19 WARN SecurityHandler: ServletContext@o.e.j.s.ServletContextHandler@4db3339e{/,null,STARTING} has uncovered http methods for path: /*
-19/10/24 18:13:29 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
-19/10/24 18:15:25 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
-19/10/24 18:15:25 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
-19/10/24 18:15:27 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
-19/10/24 18:15:27 WARN SparkContext: The jar /local_disk0/tmp/addedFile3087237670493738854xml_apis_xml_apis_1_0_b2-167e6.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:27 WARN SparkContext: The jar /local_disk0/tmp/addedFile5611526523327713621org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:27 WARN SparkContext: The jar /local_disk0/tmp/addedFile6129837045422449230org_rogach_scallop_2_11_3_3_1-ecc25.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:27 WARN SparkContext: The jar /local_disk0/tmp/addedFile6080007105696706270com_typesafe_config_1_3_1-e3e42.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:27 WARN SparkContext: The jar /local_disk0/tmp/addedFile5847270030754897032dbfs__FileStore_saak9001_bd_transengine_1_0_SNAPSHOT-530cf.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:28 WARN SparkContext: The jar /local_disk0/tmp/addedFile8029130565082794402io_spray_spray_json_2_11_1_3_5-d5f78.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:28 WARN SparkContext: The jar /local_disk0/tmp/addedFile7055026000018122439dbfs__FileStore_saak9001_bd_pqm_core_models_1_0-f4c31.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:28 WARN SparkContext: The jar /local_disk0/tmp/addedFile2365999019543371606dom4j_dom4j_1_6_1-3b35e.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:28 WARN ScalaDriverLocal: User entity information is incomplete, missing userId,orgId,user.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile3087237670493738854xml_apis_xml_apis_1_0_b2-167e6.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile5611526523327713621org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile6129837045422449230org_rogach_scallop_2_11_3_3_1-ecc25.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile6080007105696706270com_typesafe_config_1_3_1-e3e42.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile5847270030754897032dbfs__FileStore_saak9001_bd_transengine_1_0_SNAPSHOT-530cf.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile8029130565082794402io_spray_spray_json_2_11_1_3_5-d5f78.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile7055026000018122439dbfs__FileStore_saak9001_bd_pqm_core_models_1_0-f4c31.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN SparkContext: The jar /local_disk0/tmp/addedFile2365999019543371606dom4j_dom4j_1_6_1-3b35e.jar has been added already. Overwriting of added jars is not supported in the current version.
-19/10/24 18:15:40 WARN ScalaDriverLocal: User entity information is incomplete, missing userId,user.
-19/10/24 18:15:43 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
-19/10/24 18:15:43 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
-19/10/24 18:15:44 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
-19/10/24 18:15:44 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
-19/10/24 18:15:44 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
-19/10/24 18:15:44 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
-19/10/24 18:15:45 DEBUG AccessTokenProvider: AADToken: no token. Returning expiring=true
-19/10/24 18:15:45 DEBUG AccessTokenProvider: AAD Token is missing or expired: Calling refresh-token from abstract base class
-19/10/24 18:15:45 DEBUG ClientCredsTokenProvider: AADToken: refreshing client-credential based token
-19/10/24 18:15:45 DEBUG AzureADAuthenticator: AADToken: starting to fetch token using client creds for client ID 003106c3-ff8c-4c62-a060-24b8b32ea512
-19/10/24 18:15:45 DEBUG AzureADAuthenticator: AADToken: fetched token with expiry Fri Oct 25 02:15:45 UTC 2019
-19/10/24 18:15:45 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:274e6026-4efd-447e-9c3e-10a02d197133.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:3900,sReqId:b30923af-8260-4f33-b1f2-83c8d55b5da1,path:/user/hive/warehouse/bd_output_1000255.db/fct_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:45 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:8830284f-5976-4564-bb90-d9fdacd317da.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:4000,sReqId:c5850a70-6604-4b20-ae51-a5a59586e0ef,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:45 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:0e6f2e94-be88-48da-a006-e9d0ee4c67af.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:3600,sReqId:04bb9e1f-8dc9-4911-b81e-838cfa50dfa2,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:45 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:3546fb95-f660-4ed7-b43e-c5c775376016.0,lat:16,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:3700,sReqId:9b4d8797-3660-4ae6-b95a-744a7271b595,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:45 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:04460d3f-27a4-41c2-9ef4-ae98b8441c36.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:3400,sReqId:f93c0d53-5519-43db-91d9-844b1216e108,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:46 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ff6cd02f-e2b7-40b7-b1a5-15b6a1dfd559.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:4200,sReqId:b28cf125-ec5b-43b4-99f5-9a77a30897c1,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:46 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:faa6f013-6c2f-4ff0-8055-94f85fda522a.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:261,token_ns:44700,sReqId:46653ae1-adb8-458e-ae96-02f6cfb24af4,path:/user/hive/warehouse/bd_output_1000255.db,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:09:51 WARN MetricsSystem: Using default name SparkStatusTracker for source because neither spark.metrics.namespace nor spark.app.id is set.
+19/10/24 19:09:51 WARN FairSchedulableBuilder: Fair Scheduler configuration file not found so jobs will be scheduled in FIFO order. To use fair scheduling, configure pools in fairscheduler.xml or set spark.scheduler.allocation.file to a file that contains the configuration.
+19/10/24 19:09:59 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+19/10/24 19:09:59 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+19/10/24 19:10:01 WARN EC2MetadataUtils: Unable to retrieve the requested metadata.
+19/10/24 19:10:02 WARN SparkConf: The configuration key 'spark.scheduler.listenerbus.eventqueue.size' has been deprecated as of Spark 2.3 and may be removed in the future. Please use the new key 'spark.scheduler.listenerbus.eventqueue.capacity' instead.
+19/10/24 19:10:02 WARN SparkConf: The configuration key 'spark.akka.frameSize' has been deprecated as of Spark 1.6 and may be removed in the future. Please use the new key 'spark.rpc.message.maxSize' instead.
+19/10/24 19:10:02 WARN SecurityHandler: ServletContext@o.e.j.s.ServletContextHandler@7a3580e6{/,null,STARTING} has uncovered http methods for path: /*
+19/10/24 19:10:11 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+19/10/24 19:11:55 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+19/10/24 19:11:55 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+19/10/24 19:11:57 WARN SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+19/10/24 19:11:57 WARN SparkContext: The jar /local_disk0/tmp/addedFile8615111515631463064xml_apis_xml_apis_1_0_b2-167e6.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile2894027192026554251org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile6998322153762786213org_rogach_scallop_2_11_3_3_1-ecc25.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile2044345382338623581com_typesafe_config_1_3_1-e3e42.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile873552166108509392dbfs__FileStore_saak9001_bd_transengine_1_0_SNAPSHOT-530cf.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile1505729438496646678io_spray_spray_json_2_11_1_3_5-d5f78.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile2981533362243601066dbfs__FileStore_saak9001_bd_pqm_core_models_1_0-f4c31.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN SparkContext: The jar /local_disk0/tmp/addedFile493764885461761403dom4j_dom4j_1_6_1-3b35e.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:11:58 WARN ScalaDriverLocal: User entity information is incomplete, missing userId,orgId,user.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile8615111515631463064xml_apis_xml_apis_1_0_b2-167e6.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile2894027192026554251org_scalaj_scalaj_http_2_11_2_3_0-d69e4.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile6998322153762786213org_rogach_scallop_2_11_3_3_1-ecc25.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile2044345382338623581com_typesafe_config_1_3_1-e3e42.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile873552166108509392dbfs__FileStore_saak9001_bd_transengine_1_0_SNAPSHOT-530cf.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile1505729438496646678io_spray_spray_json_2_11_1_3_5-d5f78.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile2981533362243601066dbfs__FileStore_saak9001_bd_pqm_core_models_1_0-f4c31.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN SparkContext: The jar /local_disk0/tmp/addedFile493764885461761403dom4j_dom4j_1_6_1-3b35e.jar has been added already. Overwriting of added jars is not supported in the current version.
+19/10/24 19:12:11 WARN ScalaDriverLocal: User entity information is incomplete, missing userId,user.
+19/10/24 19:12:14 WARN SparkContext: Using an existing SparkContext; some configuration may not take effect.
+19/10/24 19:12:14 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+19/10/24 19:12:14 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+19/10/24 19:12:14 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+19/10/24 19:12:14 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+19/10/24 19:12:15 WARN ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+19/10/24 19:12:15 DEBUG AccessTokenProvider: AADToken: no token. Returning expiring=true
+19/10/24 19:12:15 DEBUG AccessTokenProvider: AAD Token is missing or expired: Calling refresh-token from abstract base class
+19/10/24 19:12:15 DEBUG ClientCredsTokenProvider: AADToken: refreshing client-credential based token
+19/10/24 19:12:15 DEBUG AzureADAuthenticator: AADToken: starting to fetch token using client creds for client ID 003106c3-ff8c-4c62-a060-24b8b32ea512
+19/10/24 19:12:15 DEBUG AzureADAuthenticator: AADToken: fetched token with expiry Fri Oct 25 03:12:15 UTC 2019
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ed562e63-d144-4246-af19-2ea8653afa45.0,lat:11,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:3300,sReqId:f5283a2f-eef8-4ff3-95c7-05306e3bdd39,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:89db9dd0-466f-434f-91c4-7cc663cfc153.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:4500,sReqId:e5f88bea-b862-4e7d-a293-ed2d920cb4e1,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:09aaf2dd-47da-47d2-b696-f7e4688e3a6f.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:2700,sReqId:951a30f2-ea53-43e1-917f-e58ab28faf6c,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:eaee898e-9ce1-4a72-93b2-7c533d8ec251.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:3200,sReqId:33364e12-2552-4bf7-a032-110edfa901d4,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:9d39482b-97fc-44f9-870d-a7272c0ab589.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:3600,sReqId:f6935863-3758-4965-a405-eeaeee6aa523,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:9497dd9c-57a1-4f57-983c-789032b27720.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:261,token_ns:2700,sReqId:56ef84fb-94c3-4d1f-823b-d49599c46f5e,path:/user/hive/warehouse/bd_output_1000255.db,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
 hiveDefaultUrl=null
 hiveSiteURL=null
 hiveServer2SiteUrl=null
 hivemetastoreSiteUrl=null
 Values omitted for security reason if present: [fs.s3n.awsAccessKeyId, fs.s3a.access.key, fs.s3.awsAccessKeyId, hive.server2.keystore.password, fs.s3a.proxy.password, javax.jdo.option.ConnectionPassword, fs.s3.awsSecretAccessKey, fs.s3n.awsSecretAccessKey, fs.s3a.secret.key]
 _hive.hdfs.session.path=
-    /tmp/hive/root/6e8fe552-000c-408e-b35b-7be01770bb64:
+    /tmp/hive/root/af51160b-c4b4-4af9-9fde-a4e727204a55:
 _hive.local.session.path=
-    /local_disk0/tmp/root/6e8fe552-000c-408e-b35b-7be01770bb64:
-_hive.tmp_table_space=/tmp/hive/root/6e8fe552-000c-408e-b35b-7be01770bb64/_tmp_space.db
+    /local_disk0/tmp/root/af51160b-c4b4-4af9-9fde-a4e727204a55:
+_hive.tmp_table_space=/tmp/hive/root/af51160b-c4b4-4af9-9fde-a4e727204a55/_tmp_space.db
 databricks.dbfs.client.version=v2
 databricks.s3commit.client.sslTrustAll=false
 datanucleus.autoCreateSchema=true
@@ -695,7 +694,7 @@ hive.direct.sql.max.elements.in.clause=1000
 hive.direct.sql.max.elements.values.clause=1000
 hive.direct.sql.max.query.length=100
 hive.display.partition.cols.separately=true
-hive.downloaded.resources.dir=/local_disk0/tmp/6e8fe552-000c-408e-b35b-7be01770bb64_resources
+hive.downloaded.resources.dir=/local_disk0/tmp/af51160b-c4b4-4af9-9fde-a4e727204a55_resources
 hive.driver.parallel.compilation=false
 hive.druid.broker.address.default=localhost:8082
 hive.druid.coordinator.address.default=localhost:8081
@@ -1217,7 +1216,7 @@ hive.service.metrics.hadoop2.component=hive
 hive.service.metrics.hadoop2.frequency=30s
 hive.service.metrics.reporter=JSON_FILE, JMX
 hive.session.history.enabled=false
-hive.session.id=6e8fe552-000c-408e-b35b-7be01770bb64
+hive.session.id=af51160b-c4b4-4af9-9fde-a4e727204a55
 hive.session.silent=false
 hive.skewjoin.key=100000
 hive.skewjoin.mapjoin.map.tasks=10000
@@ -1575,7 +1574,7 @@ s3native.client-write-packet-size=65536
 s3native.replication=3
 s3native.stream-buffer-size=4096
 spark.akka.frameSize=256
-spark.app.id=app-20191024181309-0000
+spark.app.id=app-20191024190952-0000
 spark.app.name=Databricks Shell
 spark.cleaner.referenceTracking.blocking=false
 spark.databricks.acl.client=com.databricks.spark.sql.acl.client.SparkSqlAclClient
@@ -1586,16 +1585,16 @@ spark.databricks.cloudProvider=Azure
 spark.databricks.clusterSource=JOB
 spark.databricks.clusterUsageTags.autoTerminationMinutes=0
 spark.databricks.clusterUsageTags.clusterAggressiveAutoscalingWindowDownSeconds=300
-spark.databricks.clusterUsageTags.clusterAllTags=[{"key":"Vendor","value":"Databricks"},{"key":"Creator","value":"basheer.ahamed@nielsen.com"},{"key":"ClusterName","value":"job-69266-run-1"},{"key":"ClusterId","value":"1024-180353-fades264"},{"key":"DatabricksEnvironment","value":"workerenv-5614106561397268"}]
+spark.databricks.clusterUsageTags.clusterAllTags=[{"key":"Vendor","value":"Databricks"},{"key":"Creator","value":"basheer.ahamed@nielsen.com"},{"key":"ClusterName","value":"job-69282-run-1"},{"key":"ClusterId","value":"1024-190552-bug64"},{"key":"DatabricksEnvironment","value":"workerenv-5614106561397268"}]
 spark.databricks.clusterUsageTags.clusterCreator=JobLauncher
 spark.databricks.clusterUsageTags.clusterGeneration=0
-spark.databricks.clusterUsageTags.clusterId=1024-180353-fades264
+spark.databricks.clusterUsageTags.clusterId=1024-190552-bug64
 spark.databricks.clusterUsageTags.clusterLogDeliveryEnabled=true
 spark.databricks.clusterUsageTags.clusterLogDestination=dbfs:/mnt/te_mount/uat_logs/
 spark.databricks.clusterUsageTags.clusterMaxWorkers=5
 spark.databricks.clusterUsageTags.clusterMetastoreAccessType=RDS_DIRECT
 spark.databricks.clusterUsageTags.clusterMinWorkers=1
-spark.databricks.clusterUsageTags.clusterName=job-69266-run-1
+spark.databricks.clusterUsageTags.clusterName=job-69282-run-1
 spark.databricks.clusterUsageTags.clusterNoDriverDaemon=false
 spark.databricks.clusterUsageTags.clusterNodeType=Standard_E16s_v3
 spark.databricks.clusterUsageTags.clusterNumSshKeys=0
@@ -1611,12 +1610,12 @@ spark.databricks.clusterUsageTags.clusterStateMessage=Starting Spark
 spark.databricks.clusterUsageTags.clusterTargetWorkers=1
 spark.databricks.clusterUsageTags.clusterWorkers=1
 spark.databricks.clusterUsageTags.containerType=LXC
-spark.databricks.clusterUsageTags.driverContainerId=0e5eac2eb12346188299f2ea2c7ddd5a
-spark.databricks.clusterUsageTags.driverContainerPrivateIp=10.139.64.48
-spark.databricks.clusterUsageTags.driverInstanceId=c9e9100b9b394492b2bc44d960047dde
-spark.databricks.clusterUsageTags.driverInstancePrivateIp=10.139.0.60
+spark.databricks.clusterUsageTags.driverContainerId=3bc88bab362e46c6953caaeb4a9111b6
+spark.databricks.clusterUsageTags.driverContainerPrivateIp=10.139.64.54
+spark.databricks.clusterUsageTags.driverInstanceId=3ea7b390144c4e849057751b2ce93bdf
+spark.databricks.clusterUsageTags.driverInstancePrivateIp=10.139.0.51
 spark.databricks.clusterUsageTags.driverNodeType=Standard_E16s_v3
-spark.databricks.clusterUsageTags.driverPublicDns=52.232.184.128
+spark.databricks.clusterUsageTags.driverPublicDns=52.242.120.107
 spark.databricks.clusterUsageTags.enableCredentialPassthrough=false
 spark.databricks.clusterUsageTags.enableDfAcls=false
 spark.databricks.clusterUsageTags.enableElasticDisk=true
@@ -1647,7 +1646,7 @@ spark.databricks.preemption.enabled=true
 spark.databricks.r.cleanWorkspace=true
 spark.databricks.redactor=com.databricks.spark.util.DatabricksSparkLogRedactorProxy
 spark.databricks.session.share=false
-spark.databricks.sparkContextId=8310231648178615226
+spark.databricks.sparkContextId=361115084784712458
 spark.databricks.sql.hive.msck.batchSize=200
 spark.databricks.sql.hive.msck.parallelism=20
 spark.databricks.tahoe.logStore.aws.class=com.databricks.tahoe.store.MultiClusterLogStore
@@ -1655,9 +1654,9 @@ spark.databricks.tahoe.logStore.azure.class=com.databricks.tahoe.store.AzureLogS
 spark.databricks.tahoe.logStore.class=com.databricks.tahoe.store.DelegatingLogStore
 spark.databricks.workerNodeTypeId=Standard_E16s_v3
 spark.driver.allowMultipleContexts=false
-spark.driver.host=10.139.64.48
+spark.driver.host=10.139.64.54
 spark.driver.maxResultSize=0
-spark.driver.port=39997
+spark.driver.port=44769
 spark.driver.tempDirectory=/local_disk0/tmp
 spark.eventLog.enabled=false
 spark.executor.extraClassPath=
@@ -2184,14 +2183,14 @@ spark.hadoop.spark.sql.sources.outputCommitterClass=com.databricks.backend.daemo
 spark.hadoop.spark.thriftserver.customHeadersToProperties=X-Databricks-User-Token:spark.databricks.token,X-Databricks-Api-Url:spark.databricks.api.url
 spark.home=/databricks/spark
 spark.logConf=true
-spark.master=spark://10.139.64.48:7077
+spark.master=spark://10.139.64.54:7077
 spark.metrics.conf=/databricks/spark/conf/metrics.properties
 spark.r.backendConnectionTimeout=604800
 spark.r.numRBackendThreads=1
-spark.r.sql.derby.temp.dir=/tmp/RtmphR4pZG
+spark.r.sql.derby.temp.dir=/tmp/Rtmpgurfg4
 spark.rdd.compress=true
-spark.repl.class.outputDir=/local_disk0/tmp/repl/spark-8310231648178615226-63e54966-a250-4e07-87d1-99caabd0b9cc
-spark.repl.class.uri=spark://10.139.64.48:39997/classes
+spark.repl.class.outputDir=/local_disk0/tmp/repl/spark-361115084784712458-0412fe4f-bce1-4d7f-84fe-99a3df2873e5
+spark.repl.class.uri=spark://10.139.64.54:44769/classes
 spark.scheduler.listenerbus.eventqueue.size=20000
 spark.scheduler.mode=FAIR
 spark.serializer.objectStreamReset=100
@@ -2229,7 +2228,7 @@ spark.task.maxFailures=10
 spark.task.reaper.enabled=true
 spark.task.reaper.killTimeout=60s
 spark.thriftserver.customHeadersToProperties=X-Databricks-User-Token:spark.databricks.token,X-Databricks-Api-Url:spark.databricks.api.url
-spark.ui.port=46130
+spark.ui.port=46614
 spark.worker.cleanup.enabled=false
 stream.stderr.reporter.enabled=true
 stream.stderr.reporter.prefix=reporter:
@@ -2444,54 +2443,53 @@ yarn.timeline-service.webapp.address=0.0.0.0:8188
 yarn.timeline-service.webapp.https.address=0.0.0.0:8190
 END========"new HiveConf()"========
 
-19/10/24 18:15:46 WARN ObjectStore: Failed to get database bd_output_1000255, returning NoSuchObjectException
-19/10/24 18:15:46 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ecc341c4-e7d3-402f-8cd7-a66fd71453a3.0,lat:12,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:261,token_ns:6100,sReqId:9ec46cba-d841-4d9b-bce1-a044dbac7433,path:/user/hive/warehouse/bd_output_1000255.db,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:48 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:15:53 WARN Utils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.debug.maxToStringFields' in SparkEnv.conf.
-19/10/24 18:15:53 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:27c30bcd-7166-4b14-9bd5-cc43f29a2d6c.0,lat:27,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:5201,sReqId:b21550fe-664c-4b19-a4e5-6d518c7da535,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:53 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:4bb65dfa-28a4-48b5-8f8b-34b8473d61e4.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:5101,sReqId:eac4ebd8-7c5d-4ee3-8b51-6ddb00aa5be7,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:57 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
-19/10/24 18:15:57 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:51b5b483-783f-4770-9d8a-ae48c9f9d5b3.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:4000,sReqId:7f9ae04a-d416-4280-9782-ee00c23e722e,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:58 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:27fd72f2-5839-4f21-9d43-1aa32ba4021c.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:5900,sReqId:f9556cd5-4341-498a-aa54-dcb28a123ea7,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:15:58 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:94082e72-e210-4b44-a497-04bba251e49c.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:4400,sReqId:3437e313-8df5-4ea4-ac82-27e2df956c51,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:16:00 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
-19/10/24 18:16:00 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:65db94fe-a438-431e-af68-c28e2d7c4c55.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:4601,sReqId:8d6c6be8-1bf1-49b6-bfac-e088c1fe8869,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:16:00 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:bb625a76-0fb2-4ec3-83cc-275ef91204a8.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:298,token_ns:5600,sReqId:1a99f453-e3c5-4240-9cc8-e9de506c5358,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trag_node_hie_prd/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:16:01 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:1d11cfc2-4e42-4a08-ad49-73fbfc384683.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:5500,sReqId:da771cd5-d994-44bd-a8e3-465eae6d6f60,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:16:01 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:dede2bab-c16d-4f55-955c-e95a710c6719.0,lat:16,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:6100,sReqId:0997499c-6306-4484-8a7b-b64019940042,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:16:02 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:17:02 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
-19/10/24 18:17:02 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:59f3a595-1e19-42f3-b2ef-b1e91a0fd73f.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:301,token_ns:3100,sReqId:ec992aa5-5e2b-42f4-a8f3-5f232cbf5643,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:17:08 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:1de05ca2-c107-4355-b750-0d1a88035c78.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:5901,sReqId:04d2638c-18e2-46c9-9009-8d765c5da57a,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_ass_pro_char_val/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:17:08 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:e523a8ad-b944-4397-8fdf-fb9bf230be21.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:304,token_ns:4200,sReqId:bd2f5acb-e188-48c4-b39b-631b79295a6b,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_ass_map_char_value/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:17:08 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ac0bae49-6eb7-4434-92e1-056e144ddcb3.0,lat:10,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:21600,sReqId:278e0f56-1737-46bf-8cf2-b842f1f112fc,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trag_item_description/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:17:08 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:c4f172f6-227d-4694-85a2-b9d9ff7caaa5.0,lat:12,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:301,token_ns:6801,sReqId:355ffbef-d326-49f9-bcca-a22c946467cb,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:17:09 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:17:14 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:18:07 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
-19/10/24 18:18:07 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
-19/10/24 18:18:07 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
-19/10/24 18:18:14 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
-19/10/24 18:18:23 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:49273450-b717-40e9-9baa-5148c95e8b02.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:301,token_ns:6300,sReqId:ab437b07-1d27-4fcd-bf81-602b9d2b7147,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:18:33 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:de015384-d6ea-40de-ba54-31232ad2f3d8.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:305,token_ns:8700,sReqId:d22d89a5-b5cd-4b2c-9988-2c510e630e67,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_pro_mapped_char_val/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:18:33 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:b2e39385-c6ef-4ad7-aea3-8448fa579970.0,lat:19,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:304,token_ns:6000,sReqId:e21d4276-ff9a-4828-8b75-8929d1c03825,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_product_char_value/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:18:33 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:9ddcf5d7-613f-4389-90d9-73efe5ba6b2c.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:5800,sReqId:15628199-162b-4167-95f7-68298cde6795,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:18:33 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:d2987615-f10f-4b36-900b-a2129fb12596.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:6500,sReqId:ac55fae7-9828-4ab4-9fde-6791db4a7b6f,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:18:34 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:20:46 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
-19/10/24 18:20:46 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:06467fac-7785-4173-aa8b-c4b023c30516.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:6000,sReqId:63202ebd-651b-4f46-bd13-75721fd3503c,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:20:56 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:f7465bd5-ecc8-4005-8a36-d76369800eb3.0,lat:21,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:4800,sReqId:1bf5912b-e716-43de-a4d5-d1b925ac6811,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:21:01 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:21:19 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:47f8436e-ceee-4640-8f8e-75f54e291c90.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:4600,sReqId:92bb2239-83fc-49b4-bd05-fab876cfecef,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:21:20 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:21:28 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:2ef8ae68-f34a-4314-b89d-09889180025b.0,lat:60,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:5700,sReqId:8bccbba7-d5f2-44c1-a17c-b11ee0411bb3,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:21:28 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:4b9181bb-d740-4628-82f0-00226f4cb3ca.0,lat:23,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:6800,sReqId:5bd4d60f-104a-4928-ad84-ca168c894225,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:22:04 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
-19/10/24 18:22:04 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:98ef22a6-1cc7-46e0-8f20-e15caab1c7a4.0,lat:11,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:4100,sReqId:dd29679c-d8c4-4ca7-9902-9010f4fe7544,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:22:09 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:3d88dd5e-3e4e-4aa1-b761-47d974cfb6b4.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:6500,sReqId:012e0f35-49df-4a8a-8915-2c12f16ccdb8,path:/user/hive/warehouse/bd_output_1000255.db/fct_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:22:09 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:d1ce51e7-4736-44f6-8b3a-9d47deecaf64.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:6500,sReqId:bda587cf-13bd-4c27-b03e-ba0b47580dec,path:/user/hive/warehouse/bd_output_1000255.db/fct_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
-19/10/24 18:22:09 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 9053689020951371326, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 9053689020951371326. Created 9053689020951371326 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
-19/10/24 18:22:09 WARN TaskSetManager: Lost task 0.0 in stage 32.0 (TID 32328, 10.139.64.151, executor 3): org.apache.parquet.schema.InvalidSchemaException: Cannot write a schema with an empty group: message spark_schema {
+19/10/24 19:12:16 WARN ObjectStore: Failed to get database bd_output_1000255, returning NoSuchObjectException
+19/10/24 19:12:16 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:1f9fc404-ec4d-4ee2-ac55-7082aa97cb97.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:261,token_ns:6800,sReqId:9fbe7257-9065-4df2-aed2-314ee712de9a,path:/user/hive/warehouse/bd_output_1000255.db,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:18 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:12:23 WARN Utils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.debug.maxToStringFields' in SparkEnv.conf.
+19/10/24 19:12:24 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ffb0e403-e324-4740-bdb5-c3e7b3490a6f.0,lat:29,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:4800,sReqId:315a6243-922c-4317-944d-3f601d7c760f,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:24 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:9c9114f5-2fcb-4983-a546-9f5b0b2e4705.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:5200,sReqId:6270ae87-0b3e-4c3f-9f3a-7a68cc1af94a,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:27 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
+19/10/24 19:12:28 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:e0a55472-e6d4-4cc6-b3e3-0ee8a1e8de9d.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:4800,sReqId:79f91678-4ce2-4522-8656-3347652d5b9a,path:/user/hive/warehouse/bd_output_1000255.db/mrkt_dim/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:28 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:12:29 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ad0b5196-16a6-402a-b71b-e033a6d844b0.0,lat:14,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:4900,sReqId:3e35f26b-3fff-4c39-b76b-b3f5f7a6e994,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:29 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:41bf6a66-892d-4fc6-8622-77a12d95c43d.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:4100,sReqId:c564ee56-d848-4794-be85-f26f71c311ec,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:31 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
+19/10/24 19:12:31 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:73ad0151-c058-4b25-9b81-4ed8dad8d5f0.0,lat:11,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:2600,sReqId:91c6bfcd-fe24-416c-98c2-4f6aabd4183a,path:/user/hive/warehouse/bd_output_1000255.db/prd_dim/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:32 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:b9aa5c45-4afb-43f6-93e6-fa60acfc05e7.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:298,token_ns:4101,sReqId:d579c0e4-5322-4f39-8812-a1a1e9a2fec9,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trag_node_hie_prd/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:32 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:a0a61731-d126-45e7-9db1-3dbfe85add85.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:5800,sReqId:41b3c75c-5584-4c71-9512-9b71ddbda51a,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:32 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:3e134259-d005-4a52-baab-22aeedbee9ca.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:285,token_ns:2700,sReqId:15cf1252-3aca-4259-91f1-f5d9f68e83f9,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:12:33 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:13:19 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
+19/10/24 19:13:19 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:f116f80b-5bac-4d8b-9181-92b92d7f6a31.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:301,token_ns:5701,sReqId:567fec42-519f-4d4d-aaf2-ade06279af24,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:13:25 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:de2d3ca0-9c53-474d-a5bb-65a992cb2c7a.0,lat:10,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:3700,sReqId:3c9ba99d-1d3d-4862-86e8-1b7b25c130cb,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_ass_pro_char_val/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:13:25 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:459aa071-ee2c-4128-be84-e3a5a766625b.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:304,token_ns:5400,sReqId:d7750b29-643f-4976-aaff-feaa7ac4c813,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_ass_map_char_value/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:13:25 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:ad0c5bc6-ad9e-43bb-9ce1-65fbf9ab2a71.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:5100,sReqId:c491bb35-257d-48cd-874d-cdd0c6a99594,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trag_item_description/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:13:26 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:503cf9fd-75ce-4ef2-aa74-a656e407574a.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:301,token_ns:5400,sReqId:f36d0309-48fa-4b7e-a949-6f5fbcd2ea51,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:13:26 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:14:19 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
+19/10/24 19:14:28 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:215b00f8-cc7e-4a9e-be9f-e153ecb9db10.0,lat:9,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:301,token_ns:4300,sReqId:3a2a0ad6-0018-47d0-a9f9-b2f89a521869,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_int_output1/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:14:37 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:b6e3dfa1-b46e-4c2e-96ba-36c9c20f83ab.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:305,token_ns:6200,sReqId:b434f315-8ccc-4422-b213-337845ae858a,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_pro_mapped_char_val/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:14:37 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:1bea6440-4395-498c-88e2-23d5d076b4a0.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:304,token_ns:3300,sReqId:8795651e-b0f0-4747-853d-b2ad76bbbdf5,path:/user/hive/warehouse/fg_snspazuna_1000233.db/trpr_product_char_value/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:14:38 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:2f32d139-75f6-4d75-85a8-b3e45327129c.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:5800,sReqId:8da5fa3e-52e4-4b3e-a18e-bc579521dd98,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:14:38 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:5b8b6ea3-e454-4cef-942e-7cde35eb1eeb.0,lat:17,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:5701,sReqId:c2f5ee0c-13a9-4db7-ac5b-361738cddae9,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:14:38 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:14:50 WARN HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+19/10/24 19:14:50 WARN HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+19/10/24 19:14:50 WARN HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+19/10/24 19:16:49 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
+19/10/24 19:16:49 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:47100d59-80bc-49b0-9d7d-b32ba33f69a3.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:4900,sReqId:874b8300-76a9-47c2-9e82-1b045fab60fe,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:16:59 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:dae5c68b-34c1-4268-9d1a-d0cd2f94d4ae.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:3600,sReqId:dc087311-5658-4bec-9b94-8e11b8457930,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:17:03 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:17:28 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:4975240a-6306-44ae-b454-87d57b3a9e66.0,lat:10,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:302,token_ns:4700,sReqId:fc89c9e6-2de4-40a7-a393-bce2c99c68ed,path:/user/hive/warehouse/bd_output_1000255.db/fg_prdc_dim_final_output/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:17:41 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:7a3d7919-b294-4817-9bc2-4d2776cd916a.0,lat:24,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:6500,sReqId:ae404847-c647-4de5-a223-b00377eb144f,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:17:41 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:aade1626-a17b-4a0b-836c-9ad688ee900d.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:270,token_ns:5300,sReqId:8068b33f-0b0a-41d8-8dff-9aa55f81035b,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:18:15 WARN FileOperations: method deleteMultiple doesn't exist. Falling back to individual deletion.
+19/10/24 19:18:15 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:2ce8d8f1-5a86-48a9-91b0-2afc1c67de8c.0,lat:8,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:286,token_ns:4600,sReqId:8b53bc07-8235-4bce-afca-cdae265e8695,path:/user/hive/warehouse/bd_output_1000255.db/prdc_dim/_spark_metadata,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:18:19 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:6ca3301b-0597-4280-a93e-31288f673b34.0,lat:7,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:7000,sReqId:2de06c9e-96e0-455d-a84c-25827f65e343,path:/user/hive/warehouse/bd_output_1000255.db/fct_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:18:19 DEBUG HttpTransport: HTTPRequest,Failed,cReqId:c11bdfcd-8a1b-48cc-92e5-34939b914801.0,lat:6,err:HTTP404(FileNotFoundException),Reqlen:0,Resplen:269,token_ns:5700,sReqId:28f0e1b1-b589-4c65-a6ee-b64d1f0c09e7,path:/user/hive/warehouse/bd_output_1000255.db/fct_dim,qp:op=GETFILESTATUS&tooid=true&api-version=2017-08-01
+19/10/24 19:18:19 WARN FairSchedulableBuilder: A job was submitted with scheduler pool 1297317500512439021, which has not been configured. This can happen when the file that pools are read from isn't set, or when that file doesn't contain 1297317500512439021. Created 1297317500512439021 with default configuration (schedulingMode: FIFO, minShare: 0, weight: 1)
+19/10/24 19:18:20 WARN TaskSetManager: Lost task 0.0 in stage 32.0 (TID 32328, 10.139.64.50, executor 0): org.apache.parquet.schema.InvalidSchemaException: Cannot write a schema with an empty group: message spark_schema {
 }
 
 	at org.apache.parquet.schema.TypeUtil$1.visit(TypeUtil.java:27)
@@ -2536,7 +2534,7 @@ END========"new HiveConf()"========
 ) [duplicate 8]
 }
 ) [duplicate 9]
-19/10/24 18:22:09 ERROR TaskSetManager: Task 0 in stage 32.0 failed 10 times; aborting job
+19/10/24 19:18:20 ERROR TaskSetManager: Task 0 in stage 32.0 failed 10 times; aborting job
 }
 
 	at org.apache.parquet.schema.TypeUtil$1.visit(TypeUtil.java:27)
@@ -2564,8 +2562,8 @@ END========"new HiveConf()"========
 	at java.lang.Thread.run(Thread.java:748)
 
 Driver stacktrace:
-19/10/24 18:22:09 ERROR FileFormatWriter: Aborting job 74047457-ef3e-4873-9fa2-93b7dfd5652e.
-org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 32.0 failed 10 times, most recent failure: Lost task 0.9 in stage 32.0 (TID 32337, 10.139.64.150, executor 2): org.apache.parquet.schema.InvalidSchemaException: Cannot write a schema with an empty group: message spark_schema {
+19/10/24 19:18:20 ERROR FileFormatWriter: Aborting job a0465648-cbca-4c41-9e0d-540116b01265.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 32.0 failed 10 times, most recent failure: Lost task 0.9 in stage 32.0 (TID 32337, 10.139.64.50, executor 0): org.apache.parquet.schema.InvalidSchemaException: Cannot write a schema with an empty group: message spark_schema {
 }
 
 	at org.apache.parquet.schema.TypeUtil$1.visit(TypeUtil.java:27)
@@ -2642,18 +2640,18 @@ Driver stacktrace:
 	at com.nielsen.te.v3.executor.StepProcessor$.stepProcessor(StepProcessor.scala:127)
 	at com.nielsen.te.v3.TEv3Main$.appMain(TEv3Main.scala:46)
 	at com.nielsen.te.v3.TEv3Main$.main(TEv3Main.scala:50)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw$$iw$$iw$$iw.<init>(command--1:1)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw$$iw$$iw.<init>(command--1:44)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw$$iw.<init>(command--1:46)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw.<init>(command--1:48)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw.<init>(command--1:50)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw.<init>(command--1:52)
-	at line52af28e3b662446ba30ac66459f5500e25.$read.<init>(command--1:54)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$.<init>(command--1:58)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$.<clinit>(command--1)
-	at line52af28e3b662446ba30ac66459f5500e25.$eval$.$print$lzycompute(<notebook>:7)
-	at line52af28e3b662446ba30ac66459f5500e25.$eval$.$print(<notebook>:6)
-	at line52af28e3b662446ba30ac66459f5500e25.$eval.$print(<notebook>)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw$$iw$$iw$$iw.<init>(command--1:1)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw$$iw$$iw.<init>(command--1:44)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw$$iw.<init>(command--1:46)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw.<init>(command--1:48)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw.<init>(command--1:50)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw.<init>(command--1:52)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read.<init>(command--1:54)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$.<init>(command--1:58)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$.<clinit>(command--1)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$eval$.$print$lzycompute(<notebook>:7)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$eval$.$print(<notebook>:6)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$eval.$print(<notebook>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2719,7 +2717,7 @@ Caused by: org.apache.parquet.schema.InvalidSchemaException: Cannot write a sche
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	... 1 more
-19/10/24 18:22:09 ERROR ScalaDriverLocal: User Code Stack Trace: 
+19/10/24 19:18:20 ERROR ScalaDriverLocal: User Code Stack Trace: 
 org.apache.spark.SparkException: Job aborted.
 	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:196)
 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:192)
@@ -2754,18 +2752,18 @@ org.apache.spark.SparkException: Job aborted.
 	at com.nielsen.te.v3.executor.StepProcessor$.stepProcessor(StepProcessor.scala:127)
 	at com.nielsen.te.v3.TEv3Main$.appMain(TEv3Main.scala:46)
 	at com.nielsen.te.v3.TEv3Main$.main(TEv3Main.scala:50)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw$$iw$$iw$$iw.<init>(command--1:1)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw$$iw$$iw.<init>(command--1:44)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw$$iw.<init>(command--1:46)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw$$iw.<init>(command--1:48)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw$$iw.<init>(command--1:50)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$$iw.<init>(command--1:52)
-	at line52af28e3b662446ba30ac66459f5500e25.$read.<init>(command--1:54)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$.<init>(command--1:58)
-	at line52af28e3b662446ba30ac66459f5500e25.$read$.<clinit>(command--1)
-	at line52af28e3b662446ba30ac66459f5500e25.$eval$.$print$lzycompute(<notebook>:7)
-	at line52af28e3b662446ba30ac66459f5500e25.$eval$.$print(<notebook>:6)
-	at line52af28e3b662446ba30ac66459f5500e25.$eval.$print(<notebook>)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw$$iw$$iw$$iw.<init>(command--1:1)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw$$iw$$iw.<init>(command--1:44)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw$$iw.<init>(command--1:46)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw$$iw.<init>(command--1:48)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw$$iw.<init>(command--1:50)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$$iw.<init>(command--1:52)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read.<init>(command--1:54)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$.<init>(command--1:58)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$read$.<clinit>(command--1)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$eval$.$print$lzycompute(<notebook>:7)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$eval$.$print(<notebook>:6)
+	at line93bd2fd5055449b2af4b4f29a8f1e71625.$eval.$print(<notebook>)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2805,7 +2803,7 @@ org.apache.spark.SparkException: Job aborted.
 	at com.databricks.backend.daemon.driver.DriverWrapper.runInner(DriverWrapper.scala:328)
 	at com.databricks.backend.daemon.driver.DriverWrapper.run(DriverWrapper.scala:215)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 32.0 failed 10 times, most recent failure: Lost task 0.9 in stage 32.0 (TID 32337, 10.139.64.150, executor 2): org.apache.parquet.schema.InvalidSchemaException: Cannot write a schema with an empty group: message spark_schema {
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 32.0 failed 10 times, most recent failure: Lost task 0.9 in stage 32.0 (TID 32337, 10.139.64.50, executor 0): org.apache.parquet.schema.InvalidSchemaException: Cannot write a schema with an empty group: message spark_schema {
 }
 
 	at org.apache.parquet.schema.TypeUtil$1.visit(TypeUtil.java:27)
@@ -2877,11 +2875,11 @@ Caused by: org.apache.parquet.schema.InvalidSchemaException: Cannot write a sche
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	... 1 more
-19/10/24 18:23:50 ERROR TaskSchedulerImpl: Lost executor 0 on 10.139.64.5: worker lost
-19/10/24 18:23:50 ERROR TaskSchedulerImpl: Lost executor 2 on 10.139.64.150: worker lost
-19/10/24 18:23:50 ERROR TaskSchedulerImpl: Lost executor 1 on 10.139.64.149: worker lost
-19/10/24 18:23:50 ERROR TaskSchedulerImpl: Lost executor 3 on 10.139.64.151: worker lost
-19/10/24 18:23:50 WARN TransportChannelHandler: Exception in connection from /10.139.64.150:44748
+19/10/24 19:18:23 ERROR TaskSchedulerImpl: Lost executor 1 on 10.139.64.8: worker lost
+19/10/24 19:18:23 ERROR TaskSchedulerImpl: Lost executor 0 on 10.139.64.50: worker lost
+19/10/24 19:18:23 ERROR TaskSchedulerImpl: Lost executor 2 on 10.139.64.5: worker lost
+19/10/24 19:18:23 ERROR TaskSchedulerImpl: Lost executor 3 on 10.139.64.7: worker lost
+19/10/24 19:18:23 WARN TransportChannelHandler: Exception in connection from /10.139.64.8:35398
 java.io.IOException: Connection reset by peer
 	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
@@ -2899,7 +2897,7 @@ java.io.IOException: Connection reset by peer
 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
 	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
 	at java.lang.Thread.run(Thread.java:748)
-19/10/24 18:23:50 WARN TransportChannelHandler: Exception in connection from /10.139.64.149:56092
+19/10/24 19:18:23 WARN TransportChannelHandler: Exception in connection from /10.139.64.5:54800
 java.io.IOException: Connection reset by peer
 	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
@@ -2917,7 +2915,7 @@ java.io.IOException: Connection reset by peer
 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
 	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:138)
 	at java.lang.Thread.run(Thread.java:748)
-19/10/24 18:23:50 WARN TransportChannelHandler: Exception in connection from /10.139.64.151:59894
+19/10/24 19:18:23 WARN TransportChannelHandler: Exception in connection from /10.139.64.7:59124
 java.io.IOException: Connection reset by peer
 	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
 	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
