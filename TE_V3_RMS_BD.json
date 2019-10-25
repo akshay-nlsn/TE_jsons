@@ -164,15 +164,15 @@
                   ],
                   "StepOutputFormat":"Parquet",
                   "StepDefinition":"CREATE TABLE",
-                  "StepQuery":"select * from abd_1000255.bd_output_1000255",
+                  "StepQuery":"aaa",
                   "StepTranformationType":"sql",
                   "StepSourceType":"N/A",
                   "StepFileLocation":"N/A",
                   "StepOutputType":"N/A",
-                  "StepOutputName":"FCT_DIM",
+                  "StepOutputName":"trag_bd_data",
                   "StepLibraryDetails":{
-                     "jarLocation":"N/A",
-                     "className":null
+                     "jarLocation":"abc.jar",
+                     "className":"com.nielsen.te.v3.core.executors.BDExecutor"
                   },
                   "StepTarget":"FINAL",
                   "StepMapping":null
