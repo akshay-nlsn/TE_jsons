@@ -1,0 +1,37 @@
+{
+   "factName":"BDFacts",
+   "factTemplate":"RMS BD Facts",
+   "configuration":{
+      "Mode":"Overwrite/Append",
+      "config":"coalesce/repartition",
+      "Partition":[
+         ""
+      ],
+      "Location":"ADLS",
+      "RunParellel":"Yes/No"
+   },
+   "steps":[
+      {
+         "StepID":"1",
+         "StepName":"trag_bd_data",
+         "StepDescription":"fact_aggregation",
+         "StepDependency":[
+            ""
+         ],
+         "StepOutputFormat":"Parquet",
+         "StepDefinition":"CREATE TABLE",
+         "StepQuery":"aaa",
+         "StepTranformationType":"Library",
+         "StepSourceType":"N/A",
+         "StepFileLocation":"N/A",
+         "StepOutputType":"Table",
+         "StepOutputName":"trag_bd_data",
+         "StepLibraryDetails":{
+            "jarLocation":"abc.jar",
+            "className":"com.nielsen.te.v3.core.executors.BDExecutor"
+         },
+         "StepTarget":"FINAL",
+         "StepMapping":null
+      }
+   ]
+}
