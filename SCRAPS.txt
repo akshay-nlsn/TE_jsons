@@ -35,3 +35,43 @@
       }
    ]
 }
+
+
+************ BD STEP
+,
+{
+  "dimensionName": "trag_bd_data",
+  "dimensionTemplate": "BDFactBuildQuery",
+  "configuration": {
+    "Mode": "Overwrite",
+    "config": "coalesce/repartition",
+    "Partition": [
+      ""
+    ],
+    "Location": "file",
+    "RunParellel": "No"
+  },
+  "steps": [
+    {
+      "StepID": "1",
+      "StepName": "BDFactTrag",
+      "StepDescription": "BD Fact Dim Build",
+      "StepDependency": [
+        ""
+      ],
+      "StepOutputFormat": "Parquet",
+      "StepDefinition": "reads csv and builds Product file",
+      "StepQuery": "select *",
+      "StepTranformationType": "sql",
+      "StepSourceType": "N/A",
+      "StepFileLocation": "N/A",
+      "StepOutputType": "N/A",
+      "StepOutputName": "trag_bd_data",
+      "StepLibraryDetails": {
+        "jarLocation": "abc.jar",
+        "className": "com.nielsen.te.v3.core.executors.BDExecutor"
+      },
+      "StepTarget": "String"
+    }
+  ]
+}
